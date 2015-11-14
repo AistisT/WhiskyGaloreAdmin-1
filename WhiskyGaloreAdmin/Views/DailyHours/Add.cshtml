@@ -1,0 +1,65 @@
+﻿@model WhiskyGaloreAdmin.Models.DailyHours
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "DailyHours";
+}
+
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">Daily staff hours</h1>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+
+@using (Html.BeginForm("DailyHours", "Manager", FormMethod.Post))
+{
+    <!-- /.row -->
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                   Add daily staff hours
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                    @Html.LabelFor(model => model.staffFullNames, new { @class = "control-label col-lg-3" })
+                                    @Html.DropDownListFor(model => model.staffFullNames, new SelectList(Model.staffFullNames, "Key", "Value"), " ", new { @class = "dropdown", id = "DropDownList" })
+                                    @Html.ValidationMessageFor(model => model.staffFullNames, String.Empty, new { @style = "color:red;!important" })
+                                </div>
+                            <script type="text/javascript">
+                                $(function () {
+                                    $('#DropDownList').change(function () {
+                                        $('#staffId').val(this.value);
+                                    });
+                                });                             
+                            </script>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.staffId, new { @class = "control-label col-lg-3" })
+                                @Html.EditorFor(model => model.staffId, new { @class = "form-control col-lg-9" }) 
+                               
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.currentDate , new { @class = "control-label col-lg-3" })
+                                <input value="@(Model.currentDate)" readonly="readonly" />  
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.hours, new { @class = "control-label col-lg-3" })
+                                @Html.EditorFor(model => model.hours, new { @class = "form-control col-lg-9" })
+                                @Html.ValidationMessageFor(model => model.hours, String.Empty, new { @style = "color:red;!important"})
+                                
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <button type="submit" class="btn btn-default">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}

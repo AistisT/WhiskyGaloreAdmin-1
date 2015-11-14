@@ -1,0 +1,53 @@
+﻿@model WhiskyGaloreAdmin.Models.Manager
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">Staff daily hours</h1>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Staff daily hours
+            </div>
+            <!-- /.panel-heading -->
+            <div class="panel-body">
+                <div class="dataTable_wrapper">
+                    <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                        <thead>
+                            <tr>
+                                <th>Staff ID</th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Hourly Rate</th>
+                                <th>Hours Worked Today</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @for (int i = 0; i < Model.dt.Rows.Count; i++)
+                            {
+                                <tr class="odd gradeX">
+                                    <td>@(Model.dt.Rows[i]["staffId"].ToString())</td>
+                                    <td>@(Model.dt.Rows[i]["forename"].ToString())</td>
+                                    <td>@(Model.dt.Rows[i]["surname"].ToString())</td>
+                                    <td>@(Model.dt.Rows[i]["hourlyRate"].ToString()) £</td>
+                                    <td>@(Model.dt.Rows[i]["hoursworked"].ToString())</td>
+                                    <td>@Html.ActionLink("Edit/Delete", "Edit", null, new { staffId = Model.dt.Rows[i]["staffId"] }, null)</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- /.panel-body -->
+        </div>
+        <!-- /.panel -->
+    </div>
+    <!-- /.col-lg-12 -->
+</div>

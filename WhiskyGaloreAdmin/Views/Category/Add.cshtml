@@ -1,0 +1,59 @@
+﻿@model WhiskyGaloreAdmin.Models.Category
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Category";
+}
+
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">Add a new category</h1>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+
+@using (Html.BeginForm())
+{
+    <!-- /.row -->
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Category details
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        @Html.AntiForgeryToken()
+                        <div class="col-lg-6">
+                            @Html.ValidationSummary(true)
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.categoryName, new { @class = "control-label col-lg-4" })
+                                @Html.EditorFor(model => model.categoryName)
+                                @Html.ValidationMessageFor(model => model.categoryName, String.Empty, new { @style = "color:red;!important" })
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.categoryDescrip, new { @class = "control-label col-lg-4" })
+                                @Html.EditorFor(model => model.categoryDescrip)
+                                @Html.ValidationMessageFor(model => model.categoryDescrip, String.Empty, new { @style = "color:red;!important" })
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.catInUse, new { @class = "control-label col-lg-4" })
+                                @Html.EnumDropDownListFor(model => model.catInUse)
+                                @Html.ValidationMessageFor(model => model.catInUse, String.Empty, new { @style = "color:red;!important" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <button type="submit" class="btn btn-default">Add</button>
+                        <button type="reset" class="btn btn-default">Reset</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.row -->
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Details")
+</div>
+

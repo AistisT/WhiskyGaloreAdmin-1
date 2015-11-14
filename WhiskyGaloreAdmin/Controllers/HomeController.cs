@@ -9,7 +9,7 @@ namespace WhiskyGaloreAdmin.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index()
+        public ActionResult Manager()
         {
             return View();
         }
@@ -111,6 +111,11 @@ namespace WhiskyGaloreAdmin.Controllers
                     {
                         return RedirectToAction("Admin", "Home");
                     }
+                    if (account.Equals("Manager"))
+                    {
+                        return RedirectToAction("Manager", "Home");
+                    }
+
                     return View();
                 }
 

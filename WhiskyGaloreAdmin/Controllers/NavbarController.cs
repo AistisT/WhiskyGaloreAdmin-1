@@ -24,6 +24,12 @@ namespace WhiskyGaloreAdmin.Controllers
                 return PartialView("_AdminNav", adminData.navbarItems().ToList());
             }
 
+            else if (System.Web.HttpContext.Current.Session["account"].ToString() == "Manager")
+            {
+                var managerData = new ManagerNavBar();
+                return PartialView("_ManagerNav", managerData.navbarItems().ToList());
+            }
+
             var data = new Data();
             return PartialView("_Navbar", data.navbarItems().ToList());
         }

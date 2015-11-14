@@ -20,7 +20,8 @@ namespace WhiskyGaloreAdmin.Models
         {
             Administrator = 1,
             Manager,
-            Warehouse
+            Warehouse,
+            Shipper
         }
         [Required(ErrorMessage = "*can not be blank!")]
         [StringLength(50, ErrorMessage = "can not exceed 50 characters")]

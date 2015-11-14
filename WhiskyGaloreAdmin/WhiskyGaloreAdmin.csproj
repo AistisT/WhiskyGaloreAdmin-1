@@ -134,6 +134,7 @@
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\ShipperController.cs" />
     <Compile Include="Domain\AdminNavBar.cs" />
+    <Compile Include="Domain\ManagerNavBar.cs" />
     <Compile Include="Domain\Data.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -920,7 +921,7 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Manager.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Shared\_Navbar.cshtml" />
     <Content Include="Views\Home\FlotCharts.cshtml" />
@@ -955,6 +956,7 @@
     <Content Include="Views\Home\Login.cshtml" />
     <Content Include="Views\Shared\_AdminNav.cshtml" />
     <Content Include="Views\Finances\DailyFinances.cshtml" />
+    <Content Include="Views\Shared\_ManagerNav.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

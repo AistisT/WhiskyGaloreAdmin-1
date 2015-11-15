@@ -19,8 +19,6 @@ namespace WhiskyGaloreAdmin.Models
         [DisplayName("Date")]
         public string currentDate { get; set; }
 
-        public SortedDictionary<uint, string> staffIds { get; set; }
-
 
         [DisplayName("Staff ID")]
         public int staffId { get; set; }

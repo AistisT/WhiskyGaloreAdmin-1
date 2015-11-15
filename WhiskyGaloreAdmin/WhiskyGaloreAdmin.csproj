@@ -963,7 +963,7 @@
     <Content Include="Views\Shared\_ShipperNav.cshtml" />
     <Content Include="Views\Shipping\Orders.cshtml" />
     <Content Include="Views\Finances\MonthlyFinances.cshtml" />
-    <Content Include="Views\Shipping\Update.cshtml" />
+    <Content Include="Views\Finances\YearlyFinances.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

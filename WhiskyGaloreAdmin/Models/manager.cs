@@ -1,6 +1,8 @@
 ﻿using System.Data;
 using System.Configuration;
 using MySql.Data.MySqlClient;
+using System;
+using System.Collections.Generic;
 
 
 
@@ -47,7 +49,6 @@ namespace WhiskyGaloreAdmin.Models
                 MySqlCommand cmd = new MySqlCommand("updateDailyFinances", con);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@idate", System.Convert.ToDateTime(dailyDate).ToString("yyyy-MM-dd"));
-                System.Diagnostics.Debug.WriteLine("Date " + System.Convert.ToDateTime(dailyDate).ToString("yyyy-MM-dd"));
                 cmd.ExecuteNonQuery();
                 con.Close();
             }
@@ -56,6 +57,47 @@ namespace WhiskyGaloreAdmin.Models
                 System.Diagnostics.Debug.WriteLine("fail !");
             }
         }
+
+        public void calculateMonthlyFinances(int month, string year)
+        {
+            try
+            {
+                string constr = ConfigurationManager.ConnectionStrings["dbCon"].ConnectionString;
+                MySqlConnection con = new MySqlConnection();
+                con.ConnectionString = constr;
+                con.Open();
+                MySqlCommand cmd = new MySqlCommand("updateMonthlyFinances", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@iyear",year );
+                cmd.Parameters.AddWithValue("@imonth", month);
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
+            catch
+            {
+                System.Diagnostics.Debug.WriteLine("fail !");
+            }
+        }
+
+        public void calculateYearlyFinances(string year)
+        {
+            try
+            {
+                string constr = ConfigurationManager.ConnectionStrings["dbCon"].ConnectionString;
+                MySqlConnection con = new MySqlConnection();
+                con.ConnectionString = constr;
+                con.Open();
+                MySqlCommand cmd = new MySqlCommand("updateYearlyFinances", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@iyear", year);
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
+            catch
+            {
+                System.Diagnostics.Debug.WriteLine("fail !");
+            }
+        }  
 
         public DataTable dt { get; set; }
     }

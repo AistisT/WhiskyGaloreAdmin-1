@@ -36,10 +36,10 @@
                             @for (int i = 0; i < Model.dt.Rows.Count; i++)
                             {
                                 <tr class="odd gradeX">
-                                    <td>@(Model.dt.Rows[i]["date"].ToString())</td>
-                                    <td>@(Model.dt.Rows[i]["revenue"].ToString())</td>
-                                    <td>@(Model.dt.Rows[i]["expenses"].ToString())</td>
-                                    <td>@(Model.dt.Rows[i]["wages"].ToString())</td>
+                                    <td>@(Model.dt.Rows[i]["date"].ToString().AsDateTime().ToShortDateString())</td>
+                                    <td>@(Model.dt.Rows[i]["revenue"].ToString()) £</td>
+                                    <td>@(Model.dt.Rows[i]["expenses"].ToString()) £</td>
+                                    <td>@(Model.dt.Rows[i]["wages"].ToString()) £</td>
                                     <td>@(Model.dt.Rows[i]["profit"].ToString()) £</td>
                                     <td>@(Model.dt.Rows[i]["balance"].ToString()) £</td>
                                 </tr>

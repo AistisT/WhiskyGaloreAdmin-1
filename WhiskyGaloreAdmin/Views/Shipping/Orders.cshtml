@@ -23,15 +23,17 @@
                         <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>Customer</th>
+                                <th>Customer/Branch</th>
+                                <th>Contact Number</th>
                                 <th>Country</th>
                                 <th>Region</th>
                                 <th>Town</th>
                                 <th>Postcode</th>
-                                <th>Shipping Cost</th>
+                                <th>Shipping Charge</th>
                                 <th>Order Status</th>
                                 <th>Processed Date</th>
                                 <th>Dispatched Date</th>
+                                <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -39,15 +41,17 @@
                             {
                                 <tr class="odd gradeX">
                                     <td>@(Model.dt.Rows[i]["orderId"].ToString())</td>
-                                    <td>@(Model.dt.Rows[i]["orderDate"].ToString())</td>
+                                    <td>@(Model.dt.Rows[i]["title"].ToString() +" "+ Model.dt.Rows[i]["forename"].ToString() +" "+ Model.dt.Rows[i]["surname"].ToString())</td>
+                                    <td>@(Model.dt.Rows[i]["firstNumber"].ToString())</td>
                                     <td>@(Model.dt.Rows[i]["country"].ToString())</td>
                                     <td>@(Model.dt.Rows[i]["region"].ToString())</td>
                                     <td>@(Model.dt.Rows[i]["town"].ToString())</td>
                                     <td>@(Model.dt.Rows[i]["postcode"].ToString())</td>
                                     <td>@(Model.dt.Rows[i]["shippingCost"].ToString()) £</td>
                                     <td>@(Model.dt.Rows[i]["orderStatus"].ToString())</td>
-                                    <td>@(Model.dt.Rows[i]["processedDate"].ToString())</td>
-                                    <td>@(Model.dt.Rows[i]["dispatchedDate"].ToString())</td>
+                                    <td>@(Model.dt.Rows[i]["processedDate"].ToString().AsDateTime().ToShortDateString())</td>
+                                    <td>@(Model.dt.Rows[i]["dispatchedDate"].ToString().AsDateTime().ToShortDateString())</td>
+                                    <td>@Html.ActionLink("View/Update", "Update", null, new { orderId = Model.dt.Rows[i]["orderId"] }, null)</td>
                                 </tr>
                             }
                         </tbody>

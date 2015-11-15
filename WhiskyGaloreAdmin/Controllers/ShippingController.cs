@@ -13,5 +13,10 @@ namespace WhiskyGaloreAdmin.Controllers
         {
             return View(new Shipping());
         }
+
+        public ActionResult Update()
+        {
+            return View(new Shipping());
+        }
     }
 }

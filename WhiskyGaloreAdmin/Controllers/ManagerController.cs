@@ -8,11 +8,22 @@ namespace WhiskyGaloreAdmin.Controllers
 
         public ActionResult Orders()
         {
-            return View(new Manager("getOrders"));
+            Manager m = new Manager();
+            m.getData("getOrders");
+            return View(m);
         }
         public ActionResult Whisky()
         {
-            return View(new Manager("getProductInfo"));
+            Manager m = new Manager();
+            m.getData("getProductInfo");
+            return View(m);
         }
+        public ActionResult Staff()
+        {
+            Manager m = new Manager();
+            m.getData("getStaffDetailsManager");
+            return View(m);
+        }
+
     }
 }

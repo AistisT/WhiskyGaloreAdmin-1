@@ -49,7 +49,7 @@ namespace WhiskyGaloreAdmin.Models
 
         public DataTable dt { get; set; }
 
-        public void getData(int oStatus)
+        public void getData(orderStatus oStatus)
         {
             currentDate = DateTime.Now;
             try
@@ -64,9 +64,8 @@ namespace WhiskyGaloreAdmin.Models
                 MySqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
-                    staffFullname = reader.GetString("forename") + " " + reader.GetString("surname");
-                    this.staffId = reader.GetInt32("staffId");
-                    hours = reader.GetFloat("hoursworked");
+                    string s = reader.GetString("orderStatus");
+                    oStatus = (orderStatus)Enum.Parse(typeof(orderStatus), s);
                 }
                 reader.Close();
                 con.Close();

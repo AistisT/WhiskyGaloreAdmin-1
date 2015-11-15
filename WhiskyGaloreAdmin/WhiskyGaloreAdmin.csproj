@@ -939,7 +939,7 @@
     <Content Include="Views\Home\Grid.cshtml" />
     <Content Include="Views\Home\Blank.cshtml" />
     <Content Include="Views\Manager\Orders.cshtml" />
-    <Content Include="Views\Manager\Finances.cshtml" />
+    <Content Include="Views\Manager\Staff.cshtml" />
     <Content Include="Views\DailyHours\Add.cshtml" />
     <Content Include="Views\DailyHours\Edit.cshtml" />
     <Content Include="Views\DailyHours\Details.cshtml" />
@@ -962,6 +962,7 @@
     <Content Include="Views\Shared\_ManagerNav.cshtml" />
     <Content Include="Views\Shared\_ShipperNav.cshtml" />
     <Content Include="Views\Shipping\Orders.cshtml" />
+    <Content Include="Views\Finances\MonthlyFinances.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

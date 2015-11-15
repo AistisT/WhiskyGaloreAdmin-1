@@ -9,7 +9,7 @@ namespace WhiskyGaloreAdmin.Models
 {
     public class Manager
     {
-        public Manager(string query)
+        public void getData(string query)
         {
             this.dt = new DataTable();
             try
@@ -27,6 +27,27 @@ namespace WhiskyGaloreAdmin.Models
                     cmd.Parameters.AddWithValue("@currentDate", System.Convert.ToDateTime(currentDate).ToString("yyyy-MM-dd"));
                 }
                 sda.Fill(dt);
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
+            catch
+            {
+                System.Diagnostics.Debug.WriteLine("fail !");
+            }
+        }
+
+        public void calculateDailyFinances(System.DateTime dailyDate)
+        {
+            try
+            {
+                string constr = ConfigurationManager.ConnectionStrings["dbCon"].ConnectionString;
+                MySqlConnection con = new MySqlConnection();
+                con.ConnectionString = constr;
+                con.Open();
+                MySqlCommand cmd = new MySqlCommand("updateDailyFinances", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@idate", System.Convert.ToDateTime(dailyDate).ToString("yyyy-MM-dd"));
+                System.Diagnostics.Debug.WriteLine("Date " + System.Convert.ToDateTime(dailyDate).ToString("yyyy-MM-dd"));
                 cmd.ExecuteNonQuery();
                 con.Close();
             }

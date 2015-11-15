@@ -1,0 +1,63 @@
+﻿@model WhiskyGaloreAdmin.Models.Shipping
+@{
+    ViewBag.Title = "Orders";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">Orders</h1>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Order List
+            </div>
+            <!-- /.panel-heading -->
+            <div class="panel-body">
+                <div class="dataTable_wrapper">
+                    <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Customer</th>
+                                <th>Country</th>
+                                <th>Region</th>
+                                <th>Town</th>
+                                <th>Postcode</th>
+                                <th>Shipping Cost</th>
+                                <th>Order Status</th>
+                                <th>Processed Date</th>
+                                <th>Dispatched Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @for (int i = 0; i < Model.dt.Rows.Count; i++)
+                            {
+                                <tr class="odd gradeX">
+                                    <td>@(Model.dt.Rows[i]["orderId"].ToString())</td>
+                                    <td>@(Model.dt.Rows[i]["orderDate"].ToString())</td>
+                                    <td>@(Model.dt.Rows[i]["country"].ToString())</td>
+                                    <td>@(Model.dt.Rows[i]["region"].ToString())</td>
+                                    <td>@(Model.dt.Rows[i]["town"].ToString())</td>
+                                    <td>@(Model.dt.Rows[i]["postcode"].ToString())</td>
+                                    <td>@(Model.dt.Rows[i]["shippingCost"].ToString()) £</td>
+                                    <td>@(Model.dt.Rows[i]["orderStatus"].ToString())</td>
+                                    <td>@(Model.dt.Rows[i]["processedDate"].ToString())</td>
+                                    <td>@(Model.dt.Rows[i]["dispatchedDate"].ToString())</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+                <!-- /.table-responsive -->
+            </div>
+            <!-- /.panel-body -->
+        </div>
+        <!-- /.panel -->
+    </div>
+    <!-- /.col-lg-12 -->
+</div>

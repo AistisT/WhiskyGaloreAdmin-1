@@ -133,9 +133,11 @@
     <Compile Include="Controllers\ManagerController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\ShipperController.cs" />
+    <Compile Include="Controllers\ShippingController.cs" />
     <Compile Include="Domain\AdminNavBar.cs" />
     <Compile Include="Domain\ManagerNavBar.cs" />
     <Compile Include="Domain\Data.cs" />
+    <Compile Include="Domain\ShipperNavBar.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -146,6 +148,7 @@
     <Compile Include="Models\Manager.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\Shipper.cs" />
+    <Compile Include="Models\Shipping.cs" />
     <Compile Include="Models\Staff.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -957,6 +960,8 @@
     <Content Include="Views\Shared\_AdminNav.cshtml" />
     <Content Include="Views\Finances\DailyFinances.cshtml" />
     <Content Include="Views\Shared\_ManagerNav.cshtml" />
+    <Content Include="Views\Shared\_ShipperNav.cshtml" />
+    <Content Include="Views\Shipping\Orders.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

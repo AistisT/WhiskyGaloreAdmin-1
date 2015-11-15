@@ -115,6 +115,11 @@ namespace WhiskyGaloreAdmin.Controllers
                     {
                         return RedirectToAction("Manager", "Home");
                     }
+                    if (account.Equals("Shipper"))
+                    {
+                        return RedirectToAction("Manager", "Home");
+                    }
+
 
                     return View();
                 }

@@ -30,6 +30,12 @@ namespace WhiskyGaloreAdmin.Controllers
                 return PartialView("_ManagerNav", managerData.navbarItems().ToList());
             }
 
+            else if (System.Web.HttpContext.Current.Session["account"].ToString() == "Shipper")
+            {
+                var ShipperData = new ShipperNavBar();
+                return PartialView("_ShipperNav", ShipperData.navbarItems().ToList());
+            }
+
             var data = new Data();
             return PartialView("_Navbar", data.navbarItems().ToList());
         }

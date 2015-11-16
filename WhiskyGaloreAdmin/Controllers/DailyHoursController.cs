@@ -12,6 +12,7 @@ namespace WhiskyGaloreAdmin.Controllers
             m.getData("getStaffDataWithDailyHours");
             return View(m);
         }
+
         public ActionResult Add()
         {
             DailyHours d = new DailyHours();
@@ -35,7 +36,7 @@ namespace WhiskyGaloreAdmin.Controllers
             //     return View(h);
         }
 
-
+        [HttpGet]
         public ActionResult Edit(int staffId)
         {
             if(staffId<0)

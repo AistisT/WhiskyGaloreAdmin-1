@@ -1,170 +1,8 @@
-C:\Users\ChangeMe\Copy\Visual Studio\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\sb-admin-2.Web.dll.config
-C:\Users\ChangeMe\Copy\Visual Studio\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\sb-admin-2.Web.dll
-C:\Users\ChangeMe\Copy\Visual Studio\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\sb-admin-2.Web.pdb
-C:\Users\ChangeMe\Copy\Visual Studio\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\Antlr3.Runtime.dll
-C:\Users\ChangeMe\Copy\Visual Studio\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\ChangeMe\Copy\Visual Studio\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\Newtonsoft.Json.dll
-C:\Users\ChangeMe\Copy\Visual Studio\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\System.Web.Helpers.dll
-C:\Users\ChangeMe\Copy\Visual Studio\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\System.Web.Mvc.dll
-C:\Users\ChangeMe\Copy\Visual Studio\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\System.Web.Optimization.dll
-C:\Users\ChangeMe\Copy\Visual Studio\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\System.Web.Razor.dll
-C:\Users\ChangeMe\Copy\Visual Studio\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\System.Web.WebPages.Deployment.dll
-C:\Users\ChangeMe\Copy\Visual Studio\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\System.Web.WebPages.dll
-C:\Users\ChangeMe\Copy\Visual Studio\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\System.Web.WebPages.Razor.dll
-C:\Users\ChangeMe\Copy\Visual Studio\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\WebGrease.dll
-C:\Users\ChangeMe\Copy\Visual Studio\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\System.Web.Helpers.xml
-C:\Users\ChangeMe\Copy\Visual Studio\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\System.Web.Mvc.xml
-C:\Users\ChangeMe\Copy\Visual Studio\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\System.Web.Optimization.xml
-C:\Users\ChangeMe\Copy\Visual Studio\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\System.Web.Razor.xml
-C:\Users\ChangeMe\Copy\Visual Studio\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\System.Web.WebPages.xml
-C:\Users\ChangeMe\Copy\Visual Studio\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\System.Web.WebPages.Deployment.xml
-C:\Users\ChangeMe\Copy\Visual Studio\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\System.Web.WebPages.Razor.xml
-C:\Users\ChangeMe\Copy\Visual Studio\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\Antlr3.Runtime.pdb
-C:\Users\ChangeMe\Copy\Visual Studio\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\Newtonsoft.Json.xml
-C:\Users\ChangeMe\Copy\Visual Studio\WhiskyGaloreAdmin\WhiskyGaloreAdmin\obj\Debug\WhiskyGaloreAdmin.csprojResolveAssemblyReference.cache
-C:\Users\ChangeMe\Copy\Visual Studio\WhiskyGaloreAdmin\WhiskyGaloreAdmin\obj\Debug\sb-admin-2.Web.dll
-C:\Users\ChangeMe\Copy\Visual Studio\WhiskyGaloreAdmin\WhiskyGaloreAdmin\obj\Debug\sb-admin-2.Web.pdb
-D:\mano dokumentai\University\Year 3\Visual Studio\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\sb-admin-2.Web.dll.config
-D:\mano dokumentai\University\Year 3\Visual Studio\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\sb-admin-2.Web.dll
-D:\mano dokumentai\University\Year 3\Visual Studio\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\sb-admin-2.Web.pdb
-D:\mano dokumentai\University\Year 3\Visual Studio\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\Antlr3.Runtime.dll
-D:\mano dokumentai\University\Year 3\Visual Studio\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\EntityFramework.dll
-D:\mano dokumentai\University\Year 3\Visual Studio\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\EntityFramework.SqlServer.dll
-D:\mano dokumentai\University\Year 3\Visual Studio\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\Microsoft.Web.Infrastructure.dll
-D:\mano dokumentai\University\Year 3\Visual Studio\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\MySql.Data.dll
-D:\mano dokumentai\University\Year 3\Visual Studio\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\Newtonsoft.Json.dll
-D:\mano dokumentai\University\Year 3\Visual Studio\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\System.Web.Helpers.dll
-D:\mano dokumentai\University\Year 3\Visual Studio\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\System.Web.Mvc.dll
-D:\mano dokumentai\University\Year 3\Visual Studio\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\System.Web.Optimization.dll
-D:\mano dokumentai\University\Year 3\Visual Studio\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\System.Web.Razor.dll
-D:\mano dokumentai\University\Year 3\Visual Studio\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\System.Web.WebPages.Deployment.dll
-D:\mano dokumentai\University\Year 3\Visual Studio\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\System.Web.WebPages.dll
-D:\mano dokumentai\University\Year 3\Visual Studio\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\System.Web.WebPages.Razor.dll
-D:\mano dokumentai\University\Year 3\Visual Studio\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\WebGrease.dll
-D:\mano dokumentai\University\Year 3\Visual Studio\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\EntityFramework.xml
-D:\mano dokumentai\University\Year 3\Visual Studio\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\EntityFramework.SqlServer.xml
-D:\mano dokumentai\University\Year 3\Visual Studio\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\System.Web.Helpers.xml
-D:\mano dokumentai\University\Year 3\Visual Studio\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\System.Web.Mvc.xml
-D:\mano dokumentai\University\Year 3\Visual Studio\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\System.Web.Optimization.xml
-D:\mano dokumentai\University\Year 3\Visual Studio\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\System.Web.Razor.xml
-D:\mano dokumentai\University\Year 3\Visual Studio\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\System.Web.WebPages.xml
-D:\mano dokumentai\University\Year 3\Visual Studio\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\System.Web.WebPages.Deployment.xml
-D:\mano dokumentai\University\Year 3\Visual Studio\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\System.Web.WebPages.Razor.xml
-D:\mano dokumentai\University\Year 3\Visual Studio\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\Antlr3.Runtime.pdb
-D:\mano dokumentai\University\Year 3\Visual Studio\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\Newtonsoft.Json.xml
-D:\mano dokumentai\University\Year 3\Visual Studio\WhiskyGaloreAdmin\WhiskyGaloreAdmin\obj\Debug\sb-admin-2.Web.dll
-D:\mano dokumentai\University\Year 3\Visual Studio\WhiskyGaloreAdmin\WhiskyGaloreAdmin\obj\Debug\sb-admin-2.Web.pdb
-D:\mano dokumentai\University\Year 3\Visual Studio\WhiskyGaloreAdmin\WhiskyGaloreAdmin\obj\Debug\WhiskyGaloreAdmin.csprojResolveAssemblyReference.cache
-C:\Users\aististaraskevicius\Source\Repos\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\sb-admin-2.Web.dll.config
-C:\Users\aististaraskevicius\Source\Repos\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\sb-admin-2.Web.dll
-C:\Users\aististaraskevicius\Source\Repos\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\sb-admin-2.Web.pdb
-C:\Users\aististaraskevicius\Source\Repos\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\Antlr3.Runtime.dll
-C:\Users\aististaraskevicius\Source\Repos\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\EntityFramework.dll
-C:\Users\aististaraskevicius\Source\Repos\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\EntityFramework.SqlServer.dll
-C:\Users\aististaraskevicius\Source\Repos\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\aististaraskevicius\Source\Repos\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\MySql.Data.dll
-C:\Users\aististaraskevicius\Source\Repos\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\Newtonsoft.Json.dll
-C:\Users\aististaraskevicius\Source\Repos\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\System.Web.Helpers.dll
-C:\Users\aististaraskevicius\Source\Repos\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\System.Web.Mvc.dll
-C:\Users\aististaraskevicius\Source\Repos\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\System.Web.Optimization.dll
-C:\Users\aististaraskevicius\Source\Repos\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\System.Web.Razor.dll
-C:\Users\aististaraskevicius\Source\Repos\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\System.Web.WebPages.Deployment.dll
-C:\Users\aististaraskevicius\Source\Repos\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\System.Web.WebPages.dll
-C:\Users\aististaraskevicius\Source\Repos\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\System.Web.WebPages.Razor.dll
-C:\Users\aististaraskevicius\Source\Repos\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\WebGrease.dll
-C:\Users\aististaraskevicius\Source\Repos\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\EntityFramework.xml
-C:\Users\aististaraskevicius\Source\Repos\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\EntityFramework.SqlServer.xml
-C:\Users\aististaraskevicius\Source\Repos\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\System.Web.Helpers.xml
-C:\Users\aististaraskevicius\Source\Repos\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\System.Web.Mvc.xml
-C:\Users\aististaraskevicius\Source\Repos\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\System.Web.Optimization.xml
-C:\Users\aististaraskevicius\Source\Repos\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\System.Web.Razor.xml
-C:\Users\aististaraskevicius\Source\Repos\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\System.Web.WebPages.xml
-C:\Users\aististaraskevicius\Source\Repos\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\System.Web.WebPages.Deployment.xml
-C:\Users\aististaraskevicius\Source\Repos\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\System.Web.WebPages.Razor.xml
-C:\Users\aististaraskevicius\Source\Repos\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\Antlr3.Runtime.pdb
-C:\Users\aististaraskevicius\Source\Repos\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\Newtonsoft.Json.xml
-C:\Users\aististaraskevicius\Source\Repos\WhiskyGaloreAdmin\WhiskyGaloreAdmin\obj\Debug\sb-admin-2.Web.dll
-C:\Users\aististaraskevicius\Source\Repos\WhiskyGaloreAdmin\WhiskyGaloreAdmin\obj\Debug\sb-admin-2.Web.pdb
-C:\Users\aististaraskevicius\Source\Repos\WhiskyGaloreAdmin\WhiskyGaloreAdmin\obj\Debug\WhiskyGaloreAdmin.csprojResolveAssemblyReference.cache
-C:\Users\xinyuewu\Source\Repos\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\sb-admin-2.Web.dll.config
-C:\Users\xinyuewu\Source\Repos\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\sb-admin-2.Web.dll
-C:\Users\xinyuewu\Source\Repos\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\sb-admin-2.Web.pdb
-C:\Users\xinyuewu\Source\Repos\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\Antlr3.Runtime.dll
-C:\Users\xinyuewu\Source\Repos\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\EntityFramework.dll
-C:\Users\xinyuewu\Source\Repos\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\EntityFramework.SqlServer.dll
-C:\Users\xinyuewu\Source\Repos\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\xinyuewu\Source\Repos\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\MySql.Data.dll
-C:\Users\xinyuewu\Source\Repos\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\Newtonsoft.Json.dll
-C:\Users\xinyuewu\Source\Repos\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\System.Web.Helpers.dll
-C:\Users\xinyuewu\Source\Repos\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\System.Web.Mvc.dll
-C:\Users\xinyuewu\Source\Repos\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\System.Web.Optimization.dll
-C:\Users\xinyuewu\Source\Repos\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\System.Web.Razor.dll
-C:\Users\xinyuewu\Source\Repos\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\System.Web.WebPages.Deployment.dll
-C:\Users\xinyuewu\Source\Repos\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\System.Web.WebPages.dll
-C:\Users\xinyuewu\Source\Repos\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\System.Web.WebPages.Razor.dll
-C:\Users\xinyuewu\Source\Repos\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\WebGrease.dll
-C:\Users\xinyuewu\Source\Repos\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\EntityFramework.xml
-C:\Users\xinyuewu\Source\Repos\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\EntityFramework.SqlServer.xml
-C:\Users\xinyuewu\Source\Repos\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\System.Web.Helpers.xml
-C:\Users\xinyuewu\Source\Repos\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\System.Web.Mvc.xml
-C:\Users\xinyuewu\Source\Repos\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\System.Web.Optimization.xml
-C:\Users\xinyuewu\Source\Repos\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\System.Web.Razor.xml
-C:\Users\xinyuewu\Source\Repos\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\System.Web.WebPages.xml
-C:\Users\xinyuewu\Source\Repos\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\System.Web.WebPages.Deployment.xml
-C:\Users\xinyuewu\Source\Repos\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\System.Web.WebPages.Razor.xml
-C:\Users\xinyuewu\Source\Repos\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\Antlr3.Runtime.pdb
-C:\Users\xinyuewu\Source\Repos\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\Newtonsoft.Json.xml
-C:\Users\xinyuewu\Source\Repos\WhiskyGaloreAdmin\WhiskyGaloreAdmin\obj\Debug\WhiskyGaloreAdmin.csprojResolveAssemblyReference.cache
-C:\Users\xinyuewu\Source\Repos\WhiskyGaloreAdmin\WhiskyGaloreAdmin\obj\Debug\sb-admin-2.Web.dll
-C:\Users\xinyuewu\Source\Repos\WhiskyGaloreAdmin\WhiskyGaloreAdmin\obj\Debug\sb-admin-2.Web.pdb
-C:\Users\ChangeMe\Copy\Visual Studio\Projects\WhiskyGaloreAdmin\WhiskyGaloreAdmin\obj\Debug\WhiskyGaloreAdmin.csprojResolveAssemblyReference.cache
-C:\Users\ChangeMe\Copy\Visual Studio\Projects\WhiskyGaloreAdmin\WhiskyGaloreAdmin\obj\Debug\sb-admin-2.Web.dll
-C:\Users\ChangeMe\Copy\Visual Studio\Projects\WhiskyGaloreAdmin\WhiskyGaloreAdmin\obj\Debug\sb-admin-2.Web.pdb
-C:\Users\ChangeMe\Copy\Visual Studio\Projects\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\sb-admin-2.Web.dll.config
-C:\Users\ChangeMe\Copy\Visual Studio\Projects\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\sb-admin-2.Web.dll
-C:\Users\ChangeMe\Copy\Visual Studio\Projects\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\sb-admin-2.Web.pdb
-C:\Users\ChangeMe\Copy\Visual Studio\Projects\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\Antlr3.Runtime.dll
-C:\Users\ChangeMe\Copy\Visual Studio\Projects\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\EntityFramework.dll
-C:\Users\ChangeMe\Copy\Visual Studio\Projects\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\EntityFramework.SqlServer.dll
-C:\Users\ChangeMe\Copy\Visual Studio\Projects\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\ChangeMe\Copy\Visual Studio\Projects\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\MySql.Data.dll
-C:\Users\ChangeMe\Copy\Visual Studio\Projects\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\Newtonsoft.Json.dll
-C:\Users\ChangeMe\Copy\Visual Studio\Projects\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\System.Web.Helpers.dll
-C:\Users\ChangeMe\Copy\Visual Studio\Projects\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\System.Web.Mvc.dll
-C:\Users\ChangeMe\Copy\Visual Studio\Projects\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\System.Web.Optimization.dll
-C:\Users\ChangeMe\Copy\Visual Studio\Projects\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\System.Web.Razor.dll
-C:\Users\ChangeMe\Copy\Visual Studio\Projects\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\System.Web.WebPages.Deployment.dll
-C:\Users\ChangeMe\Copy\Visual Studio\Projects\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\System.Web.WebPages.dll
-C:\Users\ChangeMe\Copy\Visual Studio\Projects\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\System.Web.WebPages.Razor.dll
-C:\Users\ChangeMe\Copy\Visual Studio\Projects\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\WebGrease.dll
-C:\Users\ChangeMe\Copy\Visual Studio\Projects\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\EntityFramework.xml
-C:\Users\ChangeMe\Copy\Visual Studio\Projects\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\EntityFramework.SqlServer.xml
-C:\Users\ChangeMe\Copy\Visual Studio\Projects\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\System.Web.Helpers.xml
-C:\Users\ChangeMe\Copy\Visual Studio\Projects\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\System.Web.Mvc.xml
-C:\Users\ChangeMe\Copy\Visual Studio\Projects\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\System.Web.Optimization.xml
-C:\Users\ChangeMe\Copy\Visual Studio\Projects\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\System.Web.Razor.xml
-C:\Users\ChangeMe\Copy\Visual Studio\Projects\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\System.Web.WebPages.xml
-C:\Users\ChangeMe\Copy\Visual Studio\Projects\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\System.Web.WebPages.Deployment.xml
-C:\Users\ChangeMe\Copy\Visual Studio\Projects\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\System.Web.WebPages.Razor.xml
-C:\Users\ChangeMe\Copy\Visual Studio\Projects\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\Antlr3.Runtime.pdb
-C:\Users\ChangeMe\Copy\Visual Studio\Projects\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\Newtonsoft.Json.xml
+C:\Users\aististaraskevicius\Source\Repos\WhiskyGaloreAdmin2\WhiskyGaloreAdmin\obj\Debug\WhiskyGaloreAdmin.csprojResolveAssemblyReference.cache
 C:\Users\aististaraskevicius\Source\Repos\WhiskyGaloreAdmin2\WhiskyGaloreAdmin\bin\sb-admin-2.Web.dll.config
 C:\Users\aististaraskevicius\Source\Repos\WhiskyGaloreAdmin2\WhiskyGaloreAdmin\bin\sb-admin-2.Web.dll
 C:\Users\aististaraskevicius\Source\Repos\WhiskyGaloreAdmin2\WhiskyGaloreAdmin\bin\sb-admin-2.Web.pdb
-C:\Users\aististaraskevicius\Source\Repos\WhiskyGaloreAdmin2\WhiskyGaloreAdmin\bin\Antlr3.Runtime.dll
-C:\Users\aististaraskevicius\Source\Repos\WhiskyGaloreAdmin2\WhiskyGaloreAdmin\bin\EntityFramework.dll
-C:\Users\aististaraskevicius\Source\Repos\WhiskyGaloreAdmin2\WhiskyGaloreAdmin\bin\EntityFramework.SqlServer.dll
-C:\Users\aististaraskevicius\Source\Repos\WhiskyGaloreAdmin2\WhiskyGaloreAdmin\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\aististaraskevicius\Source\Repos\WhiskyGaloreAdmin2\WhiskyGaloreAdmin\bin\MySql.Data.dll
-C:\Users\aististaraskevicius\Source\Repos\WhiskyGaloreAdmin2\WhiskyGaloreAdmin\bin\Newtonsoft.Json.dll
-C:\Users\aististaraskevicius\Source\Repos\WhiskyGaloreAdmin2\WhiskyGaloreAdmin\bin\System.Web.Helpers.dll
 C:\Users\aististaraskevicius\Source\Repos\WhiskyGaloreAdmin2\WhiskyGaloreAdmin\bin\System.Web.Mvc.dll
-C:\Users\aististaraskevicius\Source\Repos\WhiskyGaloreAdmin2\WhiskyGaloreAdmin\bin\System.Web.Optimization.dll
-C:\Users\aististaraskevicius\Source\Repos\WhiskyGaloreAdmin2\WhiskyGaloreAdmin\bin\System.Web.Razor.dll
-C:\Users\aististaraskevicius\Source\Repos\WhiskyGaloreAdmin2\WhiskyGaloreAdmin\bin\System.Web.WebPages.Deployment.dll
-C:\Users\aististaraskevicius\Source\Repos\WhiskyGaloreAdmin2\WhiskyGaloreAdmin\bin\System.Web.WebPages.dll
-C:\Users\aististaraskevicius\Source\Repos\WhiskyGaloreAdmin2\WhiskyGaloreAdmin\bin\System.Web.WebPages.Razor.dll
-C:\Users\aististaraskevicius\Source\Repos\WhiskyGaloreAdmin2\WhiskyGaloreAdmin\bin\WebGrease.dll
 C:\Users\aististaraskevicius\Source\Repos\WhiskyGaloreAdmin2\WhiskyGaloreAdmin\bin\EntityFramework.xml
 C:\Users\aististaraskevicius\Source\Repos\WhiskyGaloreAdmin2\WhiskyGaloreAdmin\bin\EntityFramework.SqlServer.xml
 C:\Users\aististaraskevicius\Source\Repos\WhiskyGaloreAdmin2\WhiskyGaloreAdmin\bin\System.Web.Helpers.xml
@@ -176,7 +14,6 @@ C:\Users\aististaraskevicius\Source\Repos\WhiskyGaloreAdmin2\WhiskyGaloreAdmin\b
 C:\Users\aististaraskevicius\Source\Repos\WhiskyGaloreAdmin2\WhiskyGaloreAdmin\bin\System.Web.WebPages.Razor.xml
 C:\Users\aististaraskevicius\Source\Repos\WhiskyGaloreAdmin2\WhiskyGaloreAdmin\bin\Antlr3.Runtime.pdb
 C:\Users\aististaraskevicius\Source\Repos\WhiskyGaloreAdmin2\WhiskyGaloreAdmin\bin\Newtonsoft.Json.xml
-C:\Users\aististaraskevicius\Source\Repos\WhiskyGaloreAdmin2\WhiskyGaloreAdmin\obj\Debug\WhiskyGaloreAdmin.csprojResolveAssemblyReference.cache
 C:\Users\aististaraskevicius\Source\Repos\WhiskyGaloreAdmin2\WhiskyGaloreAdmin\obj\Debug\sb-admin-2.Web.dll
 C:\Users\aististaraskevicius\Source\Repos\WhiskyGaloreAdmin2\WhiskyGaloreAdmin\obj\Debug\sb-admin-2.Web.pdb
 C:\Users\ChangeMe\Copy\Visual Studio\Projects\WhiskyGaloreAdminMyFork\WhiskyGaloreAdmin\obj\Debug\WhiskyGaloreAdmin.csprojResolveAssemblyReference.cache
@@ -185,20 +22,7 @@ C:\Users\ChangeMe\Copy\Visual Studio\Projects\WhiskyGaloreAdminMyFork\WhiskyGalo
 C:\Users\ChangeMe\Copy\Visual Studio\Projects\WhiskyGaloreAdminMyFork\WhiskyGaloreAdmin\bin\sb-admin-2.Web.dll.config
 C:\Users\ChangeMe\Copy\Visual Studio\Projects\WhiskyGaloreAdminMyFork\WhiskyGaloreAdmin\bin\sb-admin-2.Web.dll
 C:\Users\ChangeMe\Copy\Visual Studio\Projects\WhiskyGaloreAdminMyFork\WhiskyGaloreAdmin\bin\sb-admin-2.Web.pdb
-C:\Users\ChangeMe\Copy\Visual Studio\Projects\WhiskyGaloreAdminMyFork\WhiskyGaloreAdmin\bin\Antlr3.Runtime.dll
-C:\Users\ChangeMe\Copy\Visual Studio\Projects\WhiskyGaloreAdminMyFork\WhiskyGaloreAdmin\bin\EntityFramework.dll
-C:\Users\ChangeMe\Copy\Visual Studio\Projects\WhiskyGaloreAdminMyFork\WhiskyGaloreAdmin\bin\EntityFramework.SqlServer.dll
-C:\Users\ChangeMe\Copy\Visual Studio\Projects\WhiskyGaloreAdminMyFork\WhiskyGaloreAdmin\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\ChangeMe\Copy\Visual Studio\Projects\WhiskyGaloreAdminMyFork\WhiskyGaloreAdmin\bin\MySql.Data.dll
-C:\Users\ChangeMe\Copy\Visual Studio\Projects\WhiskyGaloreAdminMyFork\WhiskyGaloreAdmin\bin\Newtonsoft.Json.dll
-C:\Users\ChangeMe\Copy\Visual Studio\Projects\WhiskyGaloreAdminMyFork\WhiskyGaloreAdmin\bin\System.Web.Helpers.dll
 C:\Users\ChangeMe\Copy\Visual Studio\Projects\WhiskyGaloreAdminMyFork\WhiskyGaloreAdmin\bin\System.Web.Mvc.dll
-C:\Users\ChangeMe\Copy\Visual Studio\Projects\WhiskyGaloreAdminMyFork\WhiskyGaloreAdmin\bin\System.Web.Optimization.dll
-C:\Users\ChangeMe\Copy\Visual Studio\Projects\WhiskyGaloreAdminMyFork\WhiskyGaloreAdmin\bin\System.Web.Razor.dll
-C:\Users\ChangeMe\Copy\Visual Studio\Projects\WhiskyGaloreAdminMyFork\WhiskyGaloreAdmin\bin\System.Web.WebPages.Deployment.dll
-C:\Users\ChangeMe\Copy\Visual Studio\Projects\WhiskyGaloreAdminMyFork\WhiskyGaloreAdmin\bin\System.Web.WebPages.dll
-C:\Users\ChangeMe\Copy\Visual Studio\Projects\WhiskyGaloreAdminMyFork\WhiskyGaloreAdmin\bin\System.Web.WebPages.Razor.dll
-C:\Users\ChangeMe\Copy\Visual Studio\Projects\WhiskyGaloreAdminMyFork\WhiskyGaloreAdmin\bin\WebGrease.dll
 C:\Users\ChangeMe\Copy\Visual Studio\Projects\WhiskyGaloreAdminMyFork\WhiskyGaloreAdmin\bin\EntityFramework.xml
 C:\Users\ChangeMe\Copy\Visual Studio\Projects\WhiskyGaloreAdminMyFork\WhiskyGaloreAdmin\bin\EntityFramework.SqlServer.xml
 C:\Users\ChangeMe\Copy\Visual Studio\Projects\WhiskyGaloreAdminMyFork\WhiskyGaloreAdmin\bin\System.Web.Helpers.xml

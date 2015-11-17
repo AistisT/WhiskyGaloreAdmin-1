@@ -1,11 +1,16 @@
 ﻿
 $(document).ready(function () {
     $('#username').attr('disabled', true);
+    $('#staffId').attr('disabled', true);
+    $('#currentDate').attr('disabled', true);
 });
+
 
 $(document).ready(function () {
     $("#btn").click(function () {
         $('#username').attr('disabled', false);
+        $('#staffId').attr('disabled', false);
+        $('#currentDate').attr('disabled', false);
     });
 });
 

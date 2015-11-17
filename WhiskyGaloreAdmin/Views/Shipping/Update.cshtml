@@ -6,7 +6,7 @@
 
 <div class="row">
     <div class="col-lg-12">
-        <h1 class="page-header">Orders</h1>
+        <h1 class="page-header">Order @Html.DisplayFor(model => model.id)</h1>
     </div>
     <!-- /.col-lg-12 -->
 </div>
@@ -24,19 +24,89 @@
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="form-group">
-                                @Html.LabelFor(model => model.id, new { @class = "control-label col-lg-4" })
-                                @Html.EditorFor(model => model.id, new { @class = "control-label col-lg-4" })
+                                @Html.LabelFor(model => model.oStatus, new { @class = "control-label col-lg-4" })
+                                @Html.DisplayFor(model => model.oStatus, new { @class = "control-label col-lg-8" })
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.orderDate, new { @class = "control-label col-lg-4" })
+                                @Html.DisplayFor(model => model.orderDate, "{0:yyyy-MM-dd}", new { type = "date" })
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.processedDate, new { @class = "control-label col-lg-4" })
+                                @Html.DisplayFor(model => model.processedDate, "{0:yyyy-MM-dd}", new { type = "date" })
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="form-group">
-                               
+                                @Html.LabelFor(model => model.sCost, new { @class = "control-label col-lg-4" })
+                                @Html.DisplayFor(model => model.sCost, new { @class = "control-label col-lg-8" })  £
                             </div>
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.requiredDate, new { @class = "control-label col-lg-4" })
+                                @Html.DisplayFor(model => model.requiredDate, "{0:yyyy-MM-dd}", new { type = "date" })
+                            </div>
+                            @if (!string.IsNullOrEmpty(Model.dispatchedDate))
+                            {
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.dispatchedDate, new { @class = "control-label col-lg-4" })
+                                    @Html.DisplayFor(model => model.dispatchedDate, "{0:yyyy-MM-dd}", new { type = "date" })
+                                </div>
+                            }
                         </div>
                     </div>
                 </div>
             </div>
 
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Customer Contact
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.type, new { @class = "control-label col-lg-4" })
+                                @Html.DisplayFor(model => model.type, new { @class = "control-label col-lg-8" })
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.fNumber, new { @class = "control-label col-lg-4" })
+                                @Html.DisplayFor(model => model.fNumber, new { @class = "control-label col-lg-8" })
+                            </div>
+                            @if (!string.IsNullOrEmpty(Model.fax))
+                            {
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.fax, new { @class = "control-label col-lg-4" })
+                                    @Html.DisplayFor(model => model.fax, new { @class = "control-label col-lg-8" })
+                                </div>
+                            }
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.name, new { @class = "control-label col-lg-4" })
+                                @Html.DisplayFor(model => model.name, new { @class = "control-label col-lg-8" })
+                            </div>
+                            @if (!string.IsNullOrEmpty(Model.sNumber))
+                            {
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.sNumber, new { @class = "control-label col-lg-4" })
+                                    @Html.DisplayFor(model => model.sNumber, new { @class = "control-label col-lg-8" })
+                                </div>
+                            }
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.email, new { @class = "control-label col-lg-4" })
+                                @Html.DisplayFor(model => model.email, new { @class = "control-label col-lg-8" })
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.address, new { @class = "control-label col-lg-2" })
+                                @Html.DisplayFor(model => model.address, new { @class = "control-label col-lg-10" })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <div class="panel panel-default">
                 <div class="panel-heading">
@@ -54,7 +124,7 @@
                         <div class="col-lg-6">
                             <div class="form-group">
                                 @Html.LabelFor(model => model.currentDate, new { @class = "control-label col-lg-4" })
-                                @Html.EditorFor(model => model.currentDate.ToShortDateString())
+                                @Html.TextBoxFor(model => model.currentDate, "{0:yyyy-MM-dd}", new { type = "date" })
                                 @Html.ValidationMessageFor(model => model.currentDate, String.Empty, new { @style = "color:red;!important" })
                             </div>
                         </div>
@@ -67,5 +137,3 @@
         </div>
     </div>
 }
-
-

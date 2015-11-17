@@ -183,7 +183,7 @@ namespace WhiskyGaloreAdmin.Models
                         startDate = reader.GetDateTime("startDate");
                         endDate = reader.GetDateTime("expiryDate");
                         issueNo = reader.GetInt32("issueNumber");
-                        cardNo = reader.GetString("cardNumber");
+                        cardNo = Encryption.Decrypt(reader.GetString("cardNumber"));
                         cardForename = reader.GetString("fName");
                         cardSurname = reader.GetString("lName");
                         firstLine = reader.GetString("firstLine");
@@ -296,7 +296,7 @@ namespace WhiskyGaloreAdmin.Models
                     cmd.Parameters.AddWithValue("@_creditCardType", s.cardType.ToString());
                     cmd.Parameters.AddWithValue("@_fName", s.cardForename);
                     cmd.Parameters.AddWithValue("@_lName", s.cardSurname);
-                    cmd.Parameters.AddWithValue("@_cardNumber", s.cardNo);
+                    cmd.Parameters.AddWithValue("@_cardNumber", Encryption.Decrypt(s.cardNo));
                     cmd.Parameters.AddWithValue("@_startDate", s.startDate);
                     cmd.Parameters.AddWithValue("@_expiryDate", s.endDate);
                     cmd.Parameters.AddWithValue("@_issueNumber", s.issueNo);
@@ -371,7 +371,7 @@ namespace WhiskyGaloreAdmin.Models
                     cmd.Parameters.AddWithValue("@creditCardType", s.cardType.ToString());
                     cmd.Parameters.AddWithValue("@fName", s.cardForename);
                     cmd.Parameters.AddWithValue("@lName", s.cardSurname);
-                    cmd.Parameters.AddWithValue("@cardNumber", s.cardNo);
+                    cmd.Parameters.AddWithValue("@cardNumber", Encryption.Encrypt(s.cardNo));
                     cmd.Parameters.AddWithValue("@startDate", s.startDate);
                     cmd.Parameters.AddWithValue("@expiryDate", s.endDate);
                     cmd.Parameters.AddWithValue("@issueNumber", s.issueNo);

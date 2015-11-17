@@ -964,7 +964,7 @@
     <Content Include="Views\Shipping\Orders.cshtml" />
     <Content Include="Views\Finances\MonthlyFinances.cshtml" />
     <Content Include="Views\Finances\YearlyFinances.cshtml" />
-    <Content Include="Views\Finances\CountrySales.cshtml" />
+    <Content Include="Views\Shipping\Update.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

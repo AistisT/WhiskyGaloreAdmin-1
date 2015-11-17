@@ -30,9 +30,9 @@
                                 <th>Town</th>
                                 <th>Postcode</th>
                                 <th>Shipping Charge</th>
-                                <th>Order Status</th>
                                 <th>Processed Date</th>
                                 <th>Dispatched Date</th>
+                                <th>Order Status</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -48,9 +48,9 @@
                                     <td>@(Model.dt.Rows[i]["town"].ToString())</td>
                                     <td>@(Model.dt.Rows[i]["postcode"].ToString())</td>
                                     <td>@(Model.dt.Rows[i]["shippingCost"].ToString()) £</td>
-                                    <td>@(Model.dt.Rows[i]["orderStatus"].ToString())</td>
                                     <td>@(Model.dt.Rows[i]["processedDate"].ToString().AsDateTime().ToShortDateString())</td>
                                     <td>@(Model.dt.Rows[i]["dispatchedDate"].ToString().AsDateTime().ToShortDateString())</td>
+                                    <td>@(Model.dt.Rows[i]["orderStatus"].ToString())</td>
                                     <td>@Html.ActionLink("View/Update", "Update", null, new { orderId = Model.dt.Rows[i]["orderId"] }, null)</td>
                                 </tr>
                             }

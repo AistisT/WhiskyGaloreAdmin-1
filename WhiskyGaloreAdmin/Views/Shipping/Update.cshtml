@@ -15,6 +15,29 @@
     <!-- /.row -->
     <div class="row">
         <div class="col-lg-12">
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Order Details
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.id, new { @class = "control-label col-lg-4" })
+                                @Html.EditorFor(model => model.id, new { @class = "control-label col-lg-4" })
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
             <div class="panel panel-default">
                 <div class="panel-heading">
                     Update Order Status
@@ -30,8 +53,9 @@
                         </div>
                         <div class="col-lg-6">
                             <div class="form-group">
-                                @Html.LabelFor(model => model.currentDate, new { @class = "control-label col-lg-3" })
-                                @Html.EditorFor(model => model.currentDate, new { @class = "form-control col-lg-9" })
+                                @Html.LabelFor(model => model.currentDate, new { @class = "control-label col-lg-4" })
+                                @Html.EditorFor(model => model.currentDate.ToShortDateString())
+                                @Html.ValidationMessageFor(model => model.currentDate, String.Empty, new { @style = "color:red;!important" })
                             </div>
                         </div>
                         <div id="btn" class="col-lg-6">

@@ -11,12 +11,32 @@ namespace WhiskyGaloreAdmin.Controllers
     {
         public ActionResult Orders()
         {
-            return View(new Shipping());
+            Shipping s = new Shipping();
+            s.ordersTable();
+            return View(s);
         }
 
-        public ActionResult Update()
+
+
+        // GET:
+        [HttpGet]
+        public ActionResult Update(int orderId)
         {
-            return View(new Shipping());
+            System.Diagnostics.Debug.WriteLine("Update(int orderId)");
+            Shipping s = new Shipping();
+            s.orderDetails(orderId);
+            return View(s);
+        }
+
+        // POST: 
+        [HttpPost]
+        public ActionResult Update(Shipping s)
+        {
+            s.updateOrderStatus();
+                ModelState.Clear();
+                Shipping a = new Shipping();
+                a.ordersTable();
+                return View("Orders",a);
         }
     }
 }

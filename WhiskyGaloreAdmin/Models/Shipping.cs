@@ -12,41 +12,53 @@ namespace WhiskyGaloreAdmin.Models
 {
     public class Shipping
     {
-        public enum orderStatus
+        public enum changeStatus
         {
             Dispatched = 1,
             Delivered
         }
+
         [DisplayName("ID")]
         public int id { get; set; }
-        [Required(ErrorMessage = "*can not be blank!")]
-        [DisplayName("Order Status")]
-        public orderStatus oStatus { get; set; }
-        [DisplayName("Order Date")]
-        public DateTime orderDate { get; set; }
-        [DisplayName("Required Date")]
-        public Nullable<DateTime> requiredDate { get; set; }
-        [DisplayName("Processed Date")]
-        public Nullable<DateTime> processedDate { get; set; }
-        [DisplayName("Dispatched Date")]
-        public Nullable<DateTime> dispatchedDate { get; set; }
-        [DisplayName("Delivered Date")]
-        public Nullable<DateTime> deliveredDate { get; set; }
-        [DisplayName("Shipping Cost")]
-        public float sCost { get; set; }
-        [DisplayName("Customer Type")]
-        public int type { get; set; }
-        [DisplayName("Name")]
-        public String name { get; set; }
-        [DisplayName("Contact Number")]
-        public String fNumber { get; set; }
-        [DisplayName("E-mail")]
- 
 
         [Required(ErrorMessage = "*can not be blank!")]
-       // [DisplayName("Date1")]
+        [DisplayName("Change Order Status")]
+        public changeStatus cStatus { get; set; }
+
+        public string orderStatus { get; set; }
+
+        [Required(ErrorMessage = "*can not be blank!")]
+        [DisplayName("Date")]
         public DateTime currentDate { get; set; }
 
+        [DisplayName("Order Date")]
+        public String orderDate { get; set; }
+        [DisplayName("Required Date")]
+        public String requiredDate { get; set; }
+        [DisplayName("Processed Date")]
+        public String processedDate { get; set; }
+        [DisplayName("Dispatched Date")]
+        public String dispatchedDate { get; set; }
+        [DisplayName("Delivered Date")]
+        public String deliveredDate { get; set; }
+        [DisplayName("Shipping Cost")]
+        public float sCost { get; set; }
+
+        [DisplayName("Customer Type")]
+        public String type { get; set; }
+        [DisplayName("Customer Name")]
+        public String name { get; set; }
+        [DisplayName("First Phone Number")]
+        public String fNumber { get; set; }
+        [DisplayName("Second Phone Number")]
+        public String sNumber { get; set; }
+        [DisplayName("E-mail")]
+        public String email { get; set; }
+        [DisplayName("Fax")]
+        public String fax { get; set; }
+        [DisplayName("Address")]
+        public String address { get; set; }
+ 
 
         string constr = ConfigurationManager.ConnectionStrings["dbCon"].ConnectionString;
         public DataTable dt { get; set; }
@@ -79,35 +91,71 @@ namespace WhiskyGaloreAdmin.Models
             currentDate = DateTime.Now;
             try
             {
+                int branchID = 0;
                 MySqlConnection con = new MySqlConnection(constr);
                 con.Open();
                 MySqlCommand cmd = new MySqlCommand("getOrderDetails", con);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@orderID", orderId);
                 MySqlDataReader reader = cmd.ExecuteReader();
+
                 while (reader.Read())
                 {
+                    System.Diagnostics.Debug.WriteLine("first");
                     id = orderId;
-                    oStatus = (orderStatus)Enum.Parse(typeof(orderStatus), reader.GetString("orderStatus"));
-                    orderDate = reader.GetDateTime("orderDate");
-                    if (!reader.IsDBNull(reader.GetOrdinal("requiredDate"))){requiredDate = reader.GetDateTime("requiredDate");} else {requiredDate = null;}
-                    if (!reader.IsDBNull(reader.GetOrdinal("processedDate"))) { processedDate = reader.GetDateTime("processedDate"); } else { processedDate = null; }
-                    if (!reader.IsDBNull(reader.GetOrdinal("dispatchedDate"))) { dispatchedDate = reader.GetDateTime("dispatchedDate"); } else { dispatchedDate = null; }
-                    if (!reader.IsDBNull(reader.GetOrdinal("deliveredDate"))) { deliveredDate = reader.GetDateTime("deliveredDate"); } else { deliveredDate = null; }
+                    orderStatus = reader.GetString("orderStatus");
+                    System.Diagnostics.Debug.WriteLine("second "+cStatus);
                     sCost = reader.GetFloat("shippingCost");
-                    if (!reader.IsDBNull(reader.GetOrdinal("consumer_consumerid")))
+                    orderDate = reader.GetDateTime("orderDate").ToString("yyyy-MM-dd");
+                    if (!reader.IsDBNull(reader.GetOrdinal("requiredDate"))) { requiredDate = reader.GetDateTime("requiredDate").ToString("yyyy-MM-dd"); } else { requiredDate = null; }
+                    if (!reader.IsDBNull(reader.GetOrdinal("processedDate"))) { processedDate = reader.GetDateTime("processedDate").ToString("yyyy-MM-dd"); } else { processedDate = null; }
+                    if (!reader.IsDBNull(reader.GetOrdinal("dispatchedDate"))) { dispatchedDate = reader.GetDateTime("dispatchedDate").ToString("yyyy-MM-dd"); } else { dispatchedDate = null; }
+                    if (!reader.IsDBNull(reader.GetOrdinal("deliveredDate"))) { deliveredDate = reader.GetDateTime("deliveredDate").ToString("yyyy-MM-dd"); } else { deliveredDate = null; }
+
+                    if (!reader.IsDBNull(reader.GetOrdinal("branch_branchId"))) { branchID = reader.GetInt32("branch_branchId"); }
+                    
+                    name = reader.GetString("title") + " " + reader.GetString("forename") + " " + reader.GetString("surname");
+                    fNumber = reader.GetString("firstNumber");
+                    if (!reader.IsDBNull(reader.GetOrdinal("secondaryNumber"))) { sNumber = reader.GetString("secondaryNumber"); } else { sNumber = null; }
+                    email = reader.GetString("email");
+                    if (!reader.IsDBNull(reader.GetOrdinal("fax"))) { fax = reader.GetString("fax"); } else { fax = null; }
+
+                    if (!reader.IsDBNull(reader.GetOrdinal("secondLine")))
                     {
-                        //ct = 0;
-                            //reader.GetString("forename") + " " + reader.GetString("surname");
+                        address = reader.GetString("firstLine") + ", " + reader.GetString("secondLine") + ", " + reader.GetString("town") + ", " + reader.GetString("region") + ", " + reader.GetString("country") + ", " + reader.GetString("postcode");
                     }
-                    else
+                    else 
                     {
-                       // consumer = 0;
-                       // branch = reader.GetInt32("branch_branchId");
+                        address = reader.GetString("firstLine") + ", " + reader.GetString("town") + ", " + reader.GetString("region") + ", " + reader.GetString("country") + ", " + reader.GetString("postcode");
                     }
+
+                    System.Diagnostics.Debug.WriteLine("email: " + email);
+                    System.Diagnostics.Debug.WriteLine("address: " + address);
                 }
                 reader.Close();
                 con.Close();
+
+
+                MySqlConnection con1 = new MySqlConnection(constr);
+                con1.Open();
+                MySqlCommand cmd1 = new MySqlCommand("getBranchRetailer", con1);
+                cmd1.CommandType = CommandType.StoredProcedure;
+                cmd1.Parameters.AddWithValue("@branchID", branchID);
+                MySqlDataReader reader1 = cmd1.ExecuteReader();
+                if (branchID == 0)
+                {
+                    type = "Individual Customer";
+                }
+                else
+                {
+                    while (reader1.Read())
+                    {
+                        type = reader1.GetString("companyName") + "-" + reader1.GetString("branchName");
+                        
+                    }
+                    reader1.Close();
+                    con1.Close();
+                }
             }
             catch
             {
@@ -125,12 +173,12 @@ namespace WhiskyGaloreAdmin.Models
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 cmd.Parameters.AddWithValue("@iorderId", id);
-                cmd.Parameters.AddWithValue("@iorderStatus", oStatus.ToString());
+                cmd.Parameters.AddWithValue("@iorderStatus", cStatus.ToString());
                 cmd.Parameters.AddWithValue("@d", currentDate.ToString("yyyy-MM-dd"));
 
                 System.Diagnostics.Debug.WriteLine("id "+id.GetType() + " "+ id);
-                System.Diagnostics.Debug.WriteLine("date "+currentDate.ToString("yyyy-MM-dd"));
-                System.Diagnostics.Debug.WriteLine("status "+oStatus.ToString());
+                System.Diagnostics.Debug.WriteLine("date " + currentDate.ToString("yyyy-MM-dd"));
+                System.Diagnostics.Debug.WriteLine("status " + cStatus.ToString());
 
                 cmd.ExecuteNonQuery();
 

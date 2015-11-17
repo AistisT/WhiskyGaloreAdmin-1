@@ -31,6 +31,10 @@ namespace WhiskyGaloreAdmin.Models
         [DisplayName("Category in use?*")]
         public CategoryIn catInUse { get; set; }
         public int catId { get; set; }
+        [Required(ErrorMessage = "*can not be blank!")]
+        [StringLength(100, ErrorMessage = "can not exceed 100 characters")]
+        [DisplayName("Picture URL*")]
+        public string picURL { get; set; }
 
         public DataTable dt { get; set; }
         private String con_str = ConfigurationManager.ConnectionStrings["MySQLConnection"].ConnectionString.ToString();
@@ -74,6 +78,7 @@ namespace WhiskyGaloreAdmin.Models
                         catId = reader.GetInt32("categoryId");
                         categoryName = reader.GetString("categoryName");
                         categoryDescrip = reader.GetString("catDescription");
+                        picURL = reader.GetString("picUrl");
                         int i = reader.GetInt32("categoryInUse");
                         catInUse = (CategoryIn)i;
 
@@ -98,6 +103,7 @@ namespace WhiskyGaloreAdmin.Models
                     cmd.Parameters.AddWithValue("@_catName", c.categoryName);
                     cmd.Parameters.AddWithValue("@_catDescription", c.categoryDescrip);
                     cmd.Parameters.AddWithValue("@_catInUse", c.catInUse);
+                    cmd.Parameters.AddWithValue("@_picUrl", c.picURL);
                     
                     cmd.ExecuteNonQuery();
 
@@ -120,6 +126,7 @@ namespace WhiskyGaloreAdmin.Models
                     cmd.Parameters.AddWithValue("@_catDescription", c.categoryDescrip);
                     cmd.Parameters.AddWithValue("@_categoryInUse", c.catInUse);
                     cmd.Parameters.AddWithValue("@_catId", c.catId);
+                    cmd.Parameters.AddWithValue("@_picUrl", c.picURL);
 
                     cmd.ExecuteNonQuery();
 

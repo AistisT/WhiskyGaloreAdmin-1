@@ -7,7 +7,7 @@
 <script src="@Url.Content("~/Scripts/readonly.js")" type="text/javascript"></script>
 <div class="row">
     <div class="col-lg-12">
-        <h1 class="page-header">Employee details</h1>
+        <h1 class="page-header">Shipper accounts</h1>
     </div>
     <!-- /.col-lg-12 -->
 </div>
@@ -26,8 +26,6 @@
                             <tr>
                                 <th>Company Name</th>
                                 <th>Country</th>
-                                <th>Fulfilled Orders</th>
-                                <th>Unfulfilled Orders</th>
                                 <th>Username</th>
                                 <th></th>
                             </tr>
@@ -38,8 +36,6 @@
                                 <tr class="odd gradeX">
                                     <td>@(Model.dt.Rows[i]["companyName"])</td>
                                     <td>@(Model.dt.Rows[i]["country"])</td>
-                                    <td>@(Model.dt.Rows[i]["fulfilledOrders"])</td>
-                                    <td>@(Model.dt.Rows[i]["notFullfilledOrders"])</td>
                                     <td>@(Model.dt.Rows[i]["username"])</td>
                                     <td>@Html.ActionLink("Edit/Delete", "Edit", null, new { username = Model.dt.Rows[i]["username"] }, null)</td>
                                 </tr>

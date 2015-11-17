@@ -36,6 +36,11 @@
                                 @Html.ValidationMessageFor(model => model.categoryDescrip, String.Empty, new { @style = "color:red;!important" })
                             </div>
                             <div class="form-group">
+                                @Html.LabelFor(model => model.picURL, new { @class = "control-label col-lg-4" })
+                                @Html.EditorFor(model => model.picURL)
+                                @Html.ValidationMessageFor(model => model.picURL, String.Empty, new { @style = "color:red;!important" })
+                            </div>
+                            <div class="form-group">
                                 @Html.LabelFor(model => model.catInUse, new { @class = "control-label col-lg-4" })
                                 @Html.EnumDropDownListFor(model => model.catInUse)
                                 @Html.ValidationMessageFor(model => model.catInUse, String.Empty, new { @style = "color:red;!important" })

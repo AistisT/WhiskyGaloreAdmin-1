@@ -43,16 +43,16 @@ namespace WhiskyGaloreAdmin.Models
         [DisplayName("E-mail")]
         public String email { get; set; }
         [DisplayName("E-mail")]
-        public String email { get; set; }
+        /*public String email { get; set; }
         [DisplayName("E-mail")]
         public String email { get; set; }
         [DisplayName("E-mail")]
         public String email { get; set; }
         [DisplayName("E-mail")]
-        public String email { get; set; }
+        public String email { get; set; }*/
 
         [Required(ErrorMessage = "*can not be blank!")]
-        [DisplayName("Date")]
+        //[DisplayName("Date")]
         public DateTime currentDate { get; set; }
 
 
@@ -105,13 +105,13 @@ namespace WhiskyGaloreAdmin.Models
                     sCost = reader.GetFloat("shippingCost");
                     if (!reader.IsDBNull(reader.GetOrdinal("consumer_consumerid")))
                     {
-                        ct = 0;
-                            reader.GetString("forename") + " " + reader.GetString("surname");
+                        //ct = 0;
+                           // reader.GetString("forename") + " " + reader.GetString("surname");
                     }
                     else
                     {
-                        consumer = 0;
-                        branch = reader.GetInt32("branch_branchId");
+                        //consumer = 0;
+                       // branch = reader.GetInt32("branch_branchId");
                     }
                 }
                 reader.Close();

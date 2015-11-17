@@ -38,13 +38,13 @@ namespace WhiskyGaloreAdmin.Controllers
                     return PartialView("_ShipperNav", ShipperData.navbarItems().ToList());
                 }
 
-                var data = new Data();
-                return PartialView("_Navbar", data.navbarItems().ToList());
+                return RedirectToRoute("Default"); ;
             }
 
             else
             {
-                return View("Login");
+                System.Diagnostics.Debug.WriteLine("retudirecting to route");
+                return RedirectToRoute("Default", new { controller = "Home", action = "Login", id = UrlParameter.Optional });
             }
         }
     }

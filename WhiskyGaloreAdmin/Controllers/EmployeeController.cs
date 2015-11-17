@@ -7,23 +7,25 @@ using System.Diagnostics;
 using WhiskyGaloreAdmin.Models;
 using System.Data;
 using System.Net;
+using WhiskyGaloreAdmin.Filters;
 
 namespace WhiskyGaloreAdmin.Controllers
 {
     public class EmployeeController : Controller
     {
+        [LoggingFilter]
         // GET: /Employee/Details
         public ActionResult Details()
         {
             return View(new Staff());
         }
-
+        [LoggingFilter]
         // GET: /Employee/Register
         public ActionResult Register()
         {
             return View(new Staff());
         }
-
+        [LoggingFilter]
         // POST: /Employee/Register
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -42,7 +44,7 @@ namespace WhiskyGaloreAdmin.Controllers
             }
             return RedirectToAction("Details");
         }
-
+        [LoggingFilter]
         // GET: /Employee/Edit
         public ActionResult Edit(string username)
         {
@@ -60,7 +62,7 @@ namespace WhiskyGaloreAdmin.Controllers
             Staff s = new Staff(username);
             return View(s);
         }
-
+        [LoggingFilter]
         // POST: /Employee/Register
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.

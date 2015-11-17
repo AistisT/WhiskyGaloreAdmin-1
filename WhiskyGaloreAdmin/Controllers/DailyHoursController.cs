@@ -1,6 +1,7 @@
 ﻿using WhiskyGaloreAdmin.Models;
 using System.Web.Mvc;
 using System.Net;
+using WhiskyGaloreAdmin.Filters;
 
 namespace WhiskyGaloreAdmin.Controllers
 {
@@ -14,14 +15,14 @@ namespace WhiskyGaloreAdmin.Controllers
             return View("details",m);
         }
 
-
+        [LoggingFilter]
         public ActionResult Details()
         {
             Manager m = new Manager();
             m.getData("getStaffDataWithDailyHours");
             return View(m);
         }
-
+        [LoggingFilter]
         public ActionResult Add()
         {
             DailyHours d = new DailyHours();
@@ -29,7 +30,7 @@ namespace WhiskyGaloreAdmin.Controllers
             return View(d);
         }
 
-
+        [LoggingFilter]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Add(DailyHours h)
@@ -45,7 +46,7 @@ namespace WhiskyGaloreAdmin.Controllers
             //   else
             //    return View(h);
         }
-
+        [LoggingFilter]
         [HttpGet]
         public ActionResult Edit(int staffId)
         {
@@ -63,7 +64,7 @@ namespace WhiskyGaloreAdmin.Controllers
                 return View(d);
         }
 
-
+        [LoggingFilter]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(DailyHours d, string command)

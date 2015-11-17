@@ -138,6 +138,8 @@
     <Compile Include="Domain\ManagerNavBar.cs" />
     <Compile Include="Domain\Data.cs" />
     <Compile Include="Domain\ShipperNavBar.cs" />
+    <Compile Include="Filters\LoggingFilter.cs" />
+    <Compile Include="Filters\ManagerFilter.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

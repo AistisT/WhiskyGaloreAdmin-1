@@ -6,19 +6,20 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using WhiskyGaloreAdmin.Filters;
 using WhiskyGaloreAdmin.Models;
 
 namespace WhiskyGaloreAdmin.Controllers
 {
     public class CategoryController : Controller
     {
-
+        [LoggingFilter]
         // GET: /Category/Details
         public ActionResult Details()
         {
             return View(new Category());
         }
-
+        [LoggingFilter]
         // GET: /Category/Edit
         public ActionResult Edit(int categoryId)
         {
@@ -36,7 +37,7 @@ namespace WhiskyGaloreAdmin.Controllers
             Category c = new Category(categoryId);
             return View(c);
         }
-
+        [LoggingFilter]
         // POST: /Category/Edit
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -57,14 +58,14 @@ namespace WhiskyGaloreAdmin.Controllers
             }
             return RedirectToAction("Details");
         }
-
+        [LoggingFilter]
         // GET: /Category/Add/
         public ActionResult Add()
         {
 
             return View(new Category());
         }
-
+        [LoggingFilter]
         // POST: /Category/Add
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.

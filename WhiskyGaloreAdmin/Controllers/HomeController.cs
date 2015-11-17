@@ -4,16 +4,18 @@ using System.Diagnostics;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using WhiskyGaloreAdmin.Filters;
 using WhiskyGaloreAdmin.Models;
 namespace WhiskyGaloreAdmin.Controllers
 {
     public class HomeController : Controller
     {
+        [LoggingFilter]
         public ActionResult Manager()
         {
             return View();
         }
-
+        [LoggingFilter]
         //
         // GET: /Home/Admin
         public ActionResult Admin()
@@ -22,62 +24,63 @@ namespace WhiskyGaloreAdmin.Controllers
             return View();
         }
 
-
+        [LoggingFilter]
         public ActionResult FlotCharts()
         {
             return View("FlotCharts");
         }
-
+        [LoggingFilter]
         public ActionResult MorrisCharts()
         {
             return View("MorrisCharts");
         }
+        [LoggingFilter]
         public ActionResult Whisky()
         {
             var c= DependencyResolver.Current.GetService<ManagerController>();
             return c.Whisky();
         }
+        [LoggingFilter]
         public ActionResult Forms()
         {
             return View("Forms");
         }
-
+        [LoggingFilter]
         public ActionResult Panels()
         {
             return View("Panels");
         }
-
+        [LoggingFilter]
         public ActionResult Buttons()
         {
             return View("Buttons");
         }
-
+        [LoggingFilter]
         public ActionResult Notifications()
         {
             return View("Notifications");
         }
-
+        [LoggingFilter]
         public ActionResult Typography()
         {
             return View("Typography");
         }
-
+        [LoggingFilter]
         public ActionResult Icons()
         {
             return View("Icons");
         }
-
+        [LoggingFilter]
         public ActionResult Grid()
         {
             return View("Grid");
         }
-
+        [LoggingFilter]
         public ActionResult Blank()
         {
             return View("Blank");
         }
-
-        //
+        [LoggingFilter]
         // GET: /Home/Login
         public ActionResult Login()
         {
@@ -85,7 +88,7 @@ namespace WhiskyGaloreAdmin.Controllers
         }
 
 
-        //
+
         // POST: /Login
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -113,11 +116,11 @@ namespace WhiskyGaloreAdmin.Controllers
                     }
                     if (account.Equals("Manager"))
                     {
-                        return RedirectToAction("Manager", "Home");
+                        return RedirectToAction("Product", "Manager");
                     }
                     if (account.Equals("Shipper"))
                     {
-                        return RedirectToAction("Manager", "Home");
+                        return RedirectToAction("Orders", "Shipping");
                     }
 
 
@@ -136,8 +139,7 @@ namespace WhiskyGaloreAdmin.Controllers
                 return View(user);
             }
         }
-
-        //
+        [LoggingFilter]
         // GET: /LogOut
         public ActionResult Logout()
         {

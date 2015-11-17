@@ -134,6 +134,7 @@
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\ShipperController.cs" />
     <Compile Include="Controllers\ShippingController.cs" />
+    <Compile Include="Controllers\WarehouseController.cs" />
     <Compile Include="Domain\AdminNavBar.cs" />
     <Compile Include="Domain\ManagerNavBar.cs" />
     <Compile Include="Domain\Data.cs" />
@@ -151,6 +152,7 @@
     <Compile Include="Models\Shipping.cs" />
     <Compile Include="Models\Staff.cs" />
     <Compile Include="Models\User.cs" />
+    <Compile Include="Models\Warehouse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -994,6 +996,7 @@
     <Content Include="Views\Finances\YearlyFinances.cshtml" />
     <Content Include="Views\Shipping\Update.cshtml" />
     <Content Include="Views\Finances\CountrySales.cshtml" />
+    <Content Include="Views\Warehouse\Orders.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

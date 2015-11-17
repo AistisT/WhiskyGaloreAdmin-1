@@ -43,16 +43,16 @@
                             {
                                 <tr class="odd gradeX">
                                     <td>@(Model.dt.Rows[i]["orderId"].ToString())</td>
-                                    <td>@(Model.dt.Rows[i]["orderDate"].ToString())</td>
+                                    <td>@(Model.dt.Rows[i]["orderDate"].ToString().AsDateTime().ToShortDateString())</td>
                                     <td>@(Model.dt.Rows[i]["tax"].ToString())</td>
                                     <td>@(Model.dt.Rows[i]["discount"].ToString())</td>
                                     <td>@(Model.dt.Rows[i]["shippingCost"].ToString()) £</td>
                                     <td>@(Model.dt.Rows[i]["totalPrice"].ToString()) £</td>
                                     <td>@(Model.dt.Rows[i]["paid"].ToString())</td>
                                     <td>@(Model.dt.Rows[i]["orderStatus"].ToString())</td>
-                                    <td>@(Model.dt.Rows[i]["requiredDate"].ToString())</td>
-                                    <td>@(Model.dt.Rows[i]["dispatchedDate"].ToString())</td>
-                                    <td>@(Model.dt.Rows[i]["deliveredDate"].ToString())</td>
+                                    <td>@(Model.dt.Rows[i]["requiredDate"].ToString().AsDateTime().ToShortDateString())</td>
+                                    <td>@(Model.dt.Rows[i]["dispatchedDate"].ToString().AsDateTime().ToShortDateString())</td>
+                                    <td>@(Model.dt.Rows[i]["deliveredDate"].ToString().AsDateTime().ToShortDateString())</td>
                                 </tr>
                             }
                         </tbody>

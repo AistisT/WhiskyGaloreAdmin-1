@@ -27,6 +27,11 @@ namespace WhiskyGaloreAdmin.Models
             False = 0,
             True
         }
+        public enum WholeSale
+        {
+            False = 0,
+            True
+        }
         public string categoryName { get; set; }
 
         public int catId { get; set; }
@@ -69,6 +74,9 @@ namespace WhiskyGaloreAdmin.Models
         [Required(ErrorMessage = "*can not be blank!")]
         [DisplayName("Featured product?*")]
         public Featured featured { get; set; }
+        [Required(ErrorMessage = "*can not be blank!")]
+        [DisplayName("Wholesale product?*")]
+        public WholeSale wholesale { get; set; }
         [Required(ErrorMessage = "*can not be blank!")]
         [DisplayName("Staff pick?*")]
         public StaffPick staffPick { get; set; }
@@ -183,6 +191,8 @@ namespace WhiskyGaloreAdmin.Models
                         featured = (Featured)j;
                         int k = reader.GetInt32("staffPick");
                         staffPick = (StaffPick)k;
+                        int l = reader.GetInt32("wholesale");
+                        wholesale = (WholeSale)l;
 
                     }
 
@@ -219,6 +229,7 @@ namespace WhiskyGaloreAdmin.Models
                     cmd.Parameters.AddWithValue("@_picUrl", p.picUrl);
                     cmd.Parameters.AddWithValue("@_featured", p.featured);
                     cmd.Parameters.AddWithValue("@_staffPic", p.staffPick);
+                    cmd.Parameters.AddWithValue("@_wholesale", p.wholesale);
                     
                     cmd.ExecuteNonQuery();
 
@@ -255,6 +266,7 @@ namespace WhiskyGaloreAdmin.Models
                     cmd.Parameters.AddWithValue("@_featured", p.featured);
                     cmd.Parameters.AddWithValue("@_staffPic", p.staffPick);
                     cmd.Parameters.AddWithValue("@_prodId", p.productId);
+                    cmd.Parameters.AddWithValue("@_wholesale", p.wholesale);
 
                     cmd.ExecuteNonQuery();
 

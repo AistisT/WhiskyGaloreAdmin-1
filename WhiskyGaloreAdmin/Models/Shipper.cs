@@ -49,7 +49,7 @@ namespace WhiskyGaloreAdmin.Models
         public string companyName { get; set; }
         [Required(ErrorMessage = "*can not be blank!")]
         [RegularExpression(@"\d+(\.\d{1,2})?", ErrorMessage = "*invalid format")]
-        [DisplayName("Flat Rate £(00.00)*")]
+        [DisplayName("Rate per kg £(00.00)*")]
         public decimal discount { get; set; }
         //contact table fields
         [Required(ErrorMessage = "*can not be blank!")]

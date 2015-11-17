@@ -6,6 +6,15 @@ namespace WhiskyGaloreAdmin.Controllers
 {
     public class DailyHoursController : Controller
     {
+        [HandleError()]
+        public ActionResult SomeError()
+        {
+            Manager m = new Manager();
+            m.getData("getStaffDataWithDailyHours");
+            return View("details",m);
+        }
+
+
         public ActionResult Details()
         {
             Manager m = new Manager();
@@ -22,51 +31,54 @@ namespace WhiskyGaloreAdmin.Controllers
 
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Add(DailyHours h)
         {
-            //if (ModelState.IsValid)
-            /// {
+            // if (ModelState.IsValid)
+            // {
             h.InsertDailyhours(h);
             ModelState.Clear();
             DailyHours d = new DailyHours();
             d.getNames();
             return View(d);
             // }
-            // else
-            //     return View(h);
+            //   else
+            //    return View(h);
         }
 
         [HttpGet]
         public ActionResult Edit(int staffId)
         {
-            if(staffId<0)
+            if (staffId < 0)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            if (staffId  < 0)
+            if (staffId < 0)
             {
                 return HttpNotFound();
             }
-            ModelState.Clear();
-            DailyHours d = new DailyHours();
-            d.getData(staffId);
-            return View(d);
+                ModelState.Clear();
+                DailyHours d = new DailyHours();
+                d.getData(staffId);
+                return View(d);
         }
 
+
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Edit(DailyHours d, string command)
         {
 
             if (command.Equals("Update"))
             {
-               // if (ModelState.IsValid)
+                // if (ModelState.IsValid)
                 //{
-                    d.UpdateDailyHours(d);
-               // }
-              //  else
+                d.UpdateDailyHours(d);
+                // }
+                //  else
                 //{
-                 //   return View(d);
-              //  }
+                //   return View(d);
+                //  }
             }
             else
             {

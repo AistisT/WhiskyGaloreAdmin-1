@@ -22,11 +22,12 @@
                 </div>
                 <div class="panel-body">
                     <div class="row">
+                        @Html.AntiForgeryToken()
                         <div class="col-lg-6">
                             <div class="form-group">
                                     @Html.LabelFor(model => model.staffFullNames, new { @class = "control-label col-lg-3" })
                                     @Html.DropDownListFor(model => model.staffFullNames, new SelectList(Model.staffFullNames, "Key", "Value"), " ", new { @class = "dropdown", id = "DropDownList" })
-                                    @Html.ValidationMessageFor(model => model.staffFullNames, String.Empty, new { @style = "color:red;!important" })
+
                                 </div>
                             <script type="text/javascript">
                                 $(function () {
@@ -39,6 +40,7 @@
                             <div class="form-group">
                                 @Html.LabelFor(model => model.staffId, new { @class = "control-label col-lg-3" })
                                 @Html.EditorFor(model => model.staffId, new { @class = "form-control col-lg-9" }) 
+                                @Html.ValidationMessageFor(model => model.staffId, String.Empty, new { @style = "color:red;!important" })
                                
                             </div>
                         </div>

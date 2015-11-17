@@ -110,8 +110,8 @@ namespace WhiskyGaloreAdmin.Models
                 MySqlCommand cmd = new MySqlCommand("updateCountrySales", con);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@icountry", country);
-                System.Diagnostics.Debug.WriteLine("country : " + country);
                 cmd.ExecuteNonQuery();
+                System.Diagnostics.Debug.WriteLine("country : " + country);
                 con.Close();
             }
             catch

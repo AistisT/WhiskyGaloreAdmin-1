@@ -58,5 +58,22 @@ namespace WhiskyGaloreAdmin.Controllers
             return View("YearlyFinances", m);
         }
 
+        [HttpGet]
+        public ActionResult CountrySales()
+        {
+            Manager m = new Manager();
+            m.getData("getCountrySales");
+            return View(m);
+        }
+
+        public ActionResult CalculateCountry(string country)
+        {
+            ModelState.Clear();
+            Manager m = new Manager();
+            m.calculateCountrySales(country);
+            m.getData("getCountrySales");
+            return View("CountrySales", m);
+        }
+
     }
 }

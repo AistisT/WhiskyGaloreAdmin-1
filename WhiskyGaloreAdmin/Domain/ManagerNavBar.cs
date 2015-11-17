@@ -20,6 +20,7 @@ namespace WhiskyGaloreAdmin.Domain
             menu.Add(new Navbar { Id = 7, nameOption = "Daily Finances", controller = "Finances", action = "DailyFinances", imageClass = "fa fa-table fa-fw", status = true, isParent = false, parentId = 0 });
             menu.Add(new Navbar { Id = 8, nameOption = "Monthly Finances", controller = "Finances", action = "MonthlyFinances", imageClass = "fa fa-table fa-fw", status = true, isParent = false, parentId = 0 });
             menu.Add(new Navbar { Id = 9, nameOption = "Yearly Finances", controller = "Finances", action = "YearlyFinances", imageClass = "fa fa-table fa-fw", status = true, isParent = false, parentId = 0 });
+            menu.Add(new Navbar { Id = 10, nameOption ="Country Sales", controller = "Finances", action = "CountrySales", imageClass = "fa fa-table fa-fw", status = true, isParent = false, parentId = 0 });
             return menu.ToList();
         }
     }

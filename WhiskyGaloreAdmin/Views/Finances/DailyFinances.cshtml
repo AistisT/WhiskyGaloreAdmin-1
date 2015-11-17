@@ -30,7 +30,7 @@
                                 <th>Wages</th>
                                 <th>Profit</th>
                                 <th>Balance</th>
-                                <th>Calculate</th>
+                                <th>Re-Calculate</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -43,7 +43,7 @@
                                     <td>@(Model.dt.Rows[i]["wages"].ToString()) £</td>
                                     <td>@(Model.dt.Rows[i]["profit"].ToString()) £</td>
                                     <td>@(Model.dt.Rows[i]["balance"].ToString()) £</td>
-                                    <td>@Html.ActionLink("Calculate", "Calculate", null, new { dailyDate = Model.dt.Rows[i]["date"] }, null)</td>
+                                    <td>@Html.ActionLink("Re-Calculate", "Calculate", null, new { dailyDate = Model.dt.Rows[i]["date"] }, null)</td>
                                 </tr>
                             }
                         </tbody>

@@ -97,7 +97,29 @@ namespace WhiskyGaloreAdmin.Models
             {
                 System.Diagnostics.Debug.WriteLine("fail !");
             }
+        }
+
+        public void calculateCountrySales(string country)
+        {
+            try
+            {
+                string constr = ConfigurationManager.ConnectionStrings["dbCon"].ConnectionString;
+                MySqlConnection con = new MySqlConnection();
+                con.ConnectionString = constr;
+                con.Open();
+                MySqlCommand cmd = new MySqlCommand("updateCountrySales", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@icountry", country);
+                System.Diagnostics.Debug.WriteLine("country : " + country);
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
+            catch
+            {
+                System.Diagnostics.Debug.WriteLine("fail !");
+            }
         }  
+
 
         public DataTable dt { get; set; }
     }

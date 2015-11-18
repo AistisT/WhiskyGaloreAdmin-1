@@ -49,8 +49,12 @@ namespace WhiskyGaloreAdmin.Models
         public string companyName { get; set; }
         [Required(ErrorMessage = "*can not be blank!")]
         [RegularExpression(@"\d+(\.\d{1,2})?", ErrorMessage = "*invalid format")]
-        [DisplayName("Rate per kg £(00.00)*")]
+        [DisplayName("Local rate per kg £(00.00)*")]
         public decimal discount { get; set; }
+        [Required(ErrorMessage = "*can not be blank!")]
+        [RegularExpression(@"\d+(\.\d{1,2})?", ErrorMessage = "*invalid format")]
+        [DisplayName("International rate per kg £(00.00)*")]
+        public decimal internationalRate { get; set; }
         //contact table fields
         [Required(ErrorMessage = "*can not be blank!")]
         [DisplayName("Title*")]
@@ -179,7 +183,8 @@ namespace WhiskyGaloreAdmin.Models
                         string s = reader.GetString("creditCardType");
                         cardType = (Card) Enum.Parse(typeof(Card), s);
                         companyName = reader.GetString("companyName");
-                        discount = reader.GetDecimal("rate");
+                        discount = reader.GetDecimal("ukRate");
+                        internationalRate = reader.GetDecimal("intRate");
                         startDate = reader.GetDateTime("startDate");
                         endDate = reader.GetDateTime("expiryDate");
                         issueNo = reader.GetInt32("issueNumber");
@@ -290,13 +295,14 @@ namespace WhiskyGaloreAdmin.Models
 
                     //params for insert into shippers
                     cmd.Parameters.AddWithValue("@_companyName", s.companyName);
-                    cmd.Parameters.AddWithValue("@_discount", s.discount);
+                    cmd.Parameters.AddWithValue("@_ukRate", s.discount);
+                    cmd.Parameters.AddWithValue("@_intRate", s.internationalRate);
 
                     //params for insert into paymentdetails
                     cmd.Parameters.AddWithValue("@_creditCardType", s.cardType.ToString());
                     cmd.Parameters.AddWithValue("@_fName", s.cardForename);
                     cmd.Parameters.AddWithValue("@_lName", s.cardSurname);
-                    cmd.Parameters.AddWithValue("@_cardNumber", Encryption.Decrypt(s.cardNo));
+                    cmd.Parameters.AddWithValue("@_cardNumber", Encryption.Encrypt(s.cardNo));
                     cmd.Parameters.AddWithValue("@_startDate", s.startDate);
                     cmd.Parameters.AddWithValue("@_expiryDate", s.endDate);
                     cmd.Parameters.AddWithValue("@_issueNumber", s.issueNo);
@@ -365,7 +371,8 @@ namespace WhiskyGaloreAdmin.Models
 
                     //params for insert into shippers
                     cmd.Parameters.AddWithValue("@companyName", s.companyName);
-                    cmd.Parameters.AddWithValue("@discount", s.discount);
+                    cmd.Parameters.AddWithValue("@_ukRate", s.discount);
+                    cmd.Parameters.AddWithValue("@intRate", s.internationalRate);
 
                     //params for insert into paymentdetails
                     cmd.Parameters.AddWithValue("@creditCardType", s.cardType.ToString());

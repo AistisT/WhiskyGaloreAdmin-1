@@ -133,6 +133,11 @@
                                 @Html.EditorFor(model => model.discount, new { @class = "form-control col-lg-8" })
                                 @Html.ValidationMessageFor(model => model.discount, String.Empty, new { @style = "color:red;!important" })
                             </div>
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.internationalRate, new { @class = "control-label col-lg-4" })
+                                @Html.EditorFor(model => model.internationalRate, new { @class = "form-control col-lg-8" })
+                                @Html.ValidationMessageFor(model => model.internationalRate, String.Empty, new { @style = "color:red;!important" })
+                            </div>
                         </div>
                     </div>
                 </div>

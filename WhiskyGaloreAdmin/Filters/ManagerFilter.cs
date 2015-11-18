@@ -18,7 +18,7 @@ namespace WhiskyGaloreAdmin.Filters
                     new RouteValueDictionary 
                 { 
                     { "controller", "Home" }, 
-                    { "action", "Login" } 
+                    { "action", "RestrictedPage" } 
                 });
             }
         }
@@ -34,5 +34,4 @@ namespace WhiskyGaloreAdmin.Filters
     }
 
 
-    
-}
+    }

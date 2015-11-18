@@ -8,6 +8,7 @@ namespace WhiskyGaloreAdmin.Controllers
     public class FinancesController : Controller
     {
         [LoggingFilter]
+        [ManagerFilter]
         [HttpGet]
         public ActionResult DailyFinances()
         {
@@ -16,6 +17,7 @@ namespace WhiskyGaloreAdmin.Controllers
             return View(m);
         }
         [LoggingFilter]
+        [ManagerFilter]
         [HttpGet]
         public ActionResult Calculate(System.DateTime dailyDate)
         {
@@ -26,6 +28,7 @@ namespace WhiskyGaloreAdmin.Controllers
             return View("DailyFinances",m);
         }
         [LoggingFilter]
+        [ManagerFilter]
         [HttpGet]
         public ActionResult MonthlyFinances()
          {
@@ -34,6 +37,7 @@ namespace WhiskyGaloreAdmin.Controllers
             return View(m);
         }
         [LoggingFilter]
+        [ManagerFilter]
         [HttpGet]
         public ActionResult CalculateMonthly(int month,string year)
         {
@@ -44,6 +48,7 @@ namespace WhiskyGaloreAdmin.Controllers
             return View("MonthlyFinances", m);
         }
         [LoggingFilter]
+        [ManagerFilter]
         [HttpGet]
         public ActionResult YearlyFinances()
         {
@@ -52,6 +57,7 @@ namespace WhiskyGaloreAdmin.Controllers
             return View(m);
         }
         [LoggingFilter]
+        [ManagerFilter]
         public ActionResult CalculateYearly(string year)
         {
             ModelState.Clear();
@@ -61,6 +67,7 @@ namespace WhiskyGaloreAdmin.Controllers
             return View("YearlyFinances", m);
         }
         [LoggingFilter]
+        [ManagerFilter]
         [HttpGet]
         public ActionResult CountrySales()
         {
@@ -69,6 +76,7 @@ namespace WhiskyGaloreAdmin.Controllers
             return View(m);
         }
         [LoggingFilter]
+        [ManagerFilter]
         public ActionResult CalculateCountry(string country)
         {
             ModelState.Clear();
@@ -77,6 +85,5 @@ namespace WhiskyGaloreAdmin.Controllers
             m.getData("getCountrySales");
             return View("CountrySales", m);
         }
-
     }
 }

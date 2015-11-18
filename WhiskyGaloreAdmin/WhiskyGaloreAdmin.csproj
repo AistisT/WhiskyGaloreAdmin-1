@@ -999,6 +999,7 @@
     <Content Include="Views\Shipping\Update.cshtml" />
     <Content Include="Views\Finances\CountrySales.cshtml" />
     <Content Include="Views\Warehouse\Orders.cshtml" />
+    <Content Include="Views\Home\RestrictedPage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -7,6 +7,7 @@ namespace WhiskyGaloreAdmin.Controllers
     public class ManagerController : Controller
     {
         [LoggingFilter]
+        [ManagerFilter]
         public ActionResult Orders()
         {
             Manager m = new Manager();
@@ -14,6 +15,7 @@ namespace WhiskyGaloreAdmin.Controllers
             return View(m);
         }
         [LoggingFilter]
+        [ManagerFilter]
         public ActionResult Whisky()
         {
             Manager m = new Manager();
@@ -21,6 +23,7 @@ namespace WhiskyGaloreAdmin.Controllers
             return View(m);
         }
         [LoggingFilter]
+        [ManagerFilter]
         public ActionResult Staff()
         {
             Manager m = new Manager();

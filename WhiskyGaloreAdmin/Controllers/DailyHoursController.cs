@@ -7,15 +7,19 @@ namespace WhiskyGaloreAdmin.Controllers
 {
     public class DailyHoursController : Controller
     {
+        [LoggingFilter]
+        [ManagerFilter]
         [HandleError()]
         public ActionResult SomeError()
         {
+
             Manager m = new Manager();
             m.getData("getStaffDataWithDailyHours");
-            return View("details",m);
+            return View("Details",m);
         }
 
         [LoggingFilter]
+        [ManagerFilter]
         public ActionResult Details()
         {
             Manager m = new Manager();
@@ -23,6 +27,7 @@ namespace WhiskyGaloreAdmin.Controllers
             return View(m);
         }
         [LoggingFilter]
+        [ManagerFilter]
         public ActionResult Add()
         {
             DailyHours d = new DailyHours();
@@ -31,6 +36,7 @@ namespace WhiskyGaloreAdmin.Controllers
         }
 
         [LoggingFilter]
+        [ManagerFilter]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Add(DailyHours h)
@@ -47,6 +53,7 @@ namespace WhiskyGaloreAdmin.Controllers
             //    return View(h);
         }
         [LoggingFilter]
+        [ManagerFilter]
         [HttpGet]
         public ActionResult Edit(int staffId)
         {
@@ -65,6 +72,7 @@ namespace WhiskyGaloreAdmin.Controllers
         }
 
         [LoggingFilter]
+        [ManagerFilter]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(DailyHours d, string command)

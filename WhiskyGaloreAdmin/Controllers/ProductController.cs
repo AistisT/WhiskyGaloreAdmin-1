@@ -6,19 +6,20 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using WhiskyGaloreAdmin.Filters;
 using WhiskyGaloreAdmin.Models;
 
 namespace WhiskyGaloreAdmin.Controllers
 {
     public class ProductController : Controller
     {
-
+        [LoggingFilter]
         // GET: /Product/Details
         public ActionResult Details()
         {
             return View(new Product());
         }
-
+        [LoggingFilter]
         // GET: /Product/Edit
         public ActionResult Edit(int productId)
         {
@@ -35,7 +36,7 @@ namespace WhiskyGaloreAdmin.Controllers
             Product p = new Product(productId);
             return View(p);
         }
-
+        [LoggingFilter]
         // POST: /Product/Edit
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -66,14 +67,14 @@ namespace WhiskyGaloreAdmin.Controllers
             return RedirectToAction("Details");
 
         }
-
+        [LoggingFilter]
         // GET: /Product/Add
         public ActionResult Add()
         {
             
             return View(new Product());
         }
-
+        [LoggingFilter]
         // POST: /Product/Add
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.

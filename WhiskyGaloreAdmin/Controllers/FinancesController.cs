@@ -1,12 +1,13 @@
 ﻿using System.Net;
 using System.Web.Mvc;
+using WhiskyGaloreAdmin.Filters;
 using WhiskyGaloreAdmin.Models;
 
 namespace WhiskyGaloreAdmin.Controllers
 {
     public class FinancesController : Controller
     {
-
+        [LoggingFilter]
         [HttpGet]
         public ActionResult DailyFinances()
         {
@@ -14,6 +15,7 @@ namespace WhiskyGaloreAdmin.Controllers
             m.getData("getDailyFinances");
             return View(m);
         }
+        [LoggingFilter]
         [HttpGet]
         public ActionResult Calculate(System.DateTime dailyDate)
         {
@@ -23,7 +25,7 @@ namespace WhiskyGaloreAdmin.Controllers
             m.getData("getDailyFinances");
             return View("DailyFinances",m);
         }
-
+        [LoggingFilter]
         [HttpGet]
         public ActionResult MonthlyFinances()
          {
@@ -31,6 +33,7 @@ namespace WhiskyGaloreAdmin.Controllers
             m.getData("getMonthlyFinances");
             return View(m);
         }
+        [LoggingFilter]
         [HttpGet]
         public ActionResult CalculateMonthly(int month,string year)
         {
@@ -40,7 +43,7 @@ namespace WhiskyGaloreAdmin.Controllers
             m.getData("getMonthlyFinances");
             return View("MonthlyFinances", m);
         }
-
+        [LoggingFilter]
         [HttpGet]
         public ActionResult YearlyFinances()
         {
@@ -48,7 +51,7 @@ namespace WhiskyGaloreAdmin.Controllers
             m.getData("getYearlyFinances");
             return View(m);
         }
-
+        [LoggingFilter]
         public ActionResult CalculateYearly(string year)
         {
             ModelState.Clear();
@@ -57,7 +60,7 @@ namespace WhiskyGaloreAdmin.Controllers
             m.getData("getYearlyFinances");
             return View("YearlyFinances", m);
         }
-
+        [LoggingFilter]
         [HttpGet]
         public ActionResult CountrySales()
         {
@@ -65,7 +68,7 @@ namespace WhiskyGaloreAdmin.Controllers
             m.getData("getCountrySales");
             return View(m);
         }
-
+        [LoggingFilter]
         public ActionResult CalculateCountry(string country)
         {
             ModelState.Clear();

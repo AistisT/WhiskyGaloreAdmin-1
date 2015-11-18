@@ -18,26 +18,34 @@ namespace WhiskyGaloreAdmin.Controllers
             //var model = (User) Session["lg"] ?? new User();
             var model = new User();
             //model.
-            if (System.Web.HttpContext.Current.Session["account"].ToString() == "Administrator")
+            if (System.Web.HttpContext.Current.Session["account"] != null)
             {
-                var adminData = new AdminNavBar();
-                return PartialView("_AdminNav", adminData.navbarItems().ToList());
+                if (System.Web.HttpContext.Current.Session["account"].ToString() == "Administrator")
+                {
+                    var adminData = new AdminNavBar();
+                    return PartialView("_AdminNav", adminData.navbarItems().ToList());
+                }
+
+                else if (System.Web.HttpContext.Current.Session["account"].ToString() == "Manager")
+                {
+                    var managerData = new ManagerNavBar();
+                    return PartialView("_ManagerNav", managerData.navbarItems().ToList());
+                }
+
+                else if (System.Web.HttpContext.Current.Session["account"].ToString() == "Shipper")
+                {
+                    var ShipperData = new ShipperNavBar();
+                    return PartialView("_ShipperNav", ShipperData.navbarItems().ToList());
+                }
+
+                return RedirectToRoute("Default"); ;
             }
 
-            else if (System.Web.HttpContext.Current.Session["account"].ToString() == "Manager")
+            else
             {
-                var managerData = new ManagerNavBar();
-                return PartialView("_ManagerNav", managerData.navbarItems().ToList());
+                System.Diagnostics.Debug.WriteLine("retudirecting to route");
+                return RedirectToRoute("Default", new { controller = "Home", action = "Login", id = UrlParameter.Optional });
             }
-
-            else if (System.Web.HttpContext.Current.Session["account"].ToString() == "Shipper")
-            {
-                var ShipperData = new ShipperNavBar();
-                return PartialView("_ShipperNav", ShipperData.navbarItems().ToList());
-            }
-
-            var data = new Data();
-            return PartialView("_Navbar", data.navbarItems().ToList());
         }
     }
 }

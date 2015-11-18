@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using WhiskyGaloreAdmin.Filters;
 using WhiskyGaloreAdmin.Models;
 
 namespace WhiskyGaloreAdmin.Controllers
 {
     public class ShippingController : Controller
     {
+        [LoggingFilter]
         public ActionResult Orders()
         {
             Shipping s = new Shipping();
@@ -18,7 +20,7 @@ namespace WhiskyGaloreAdmin.Controllers
 
 
 
-        // GET:
+        [LoggingFilter]
         [HttpGet]
         public ActionResult Update(int orderId)
         {
@@ -28,7 +30,7 @@ namespace WhiskyGaloreAdmin.Controllers
             return View(s);
         }
 
-        // POST: 
+        [LoggingFilter]
         [HttpPost]
         public ActionResult Update(Shipping s)
         {

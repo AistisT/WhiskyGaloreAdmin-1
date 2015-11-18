@@ -19,15 +19,14 @@ namespace WhiskyGaloreAdmin.Models
         [DisplayName("Date")]
         public string currentDate { get; set; }
 
-
+        [Required(ErrorMessage = "*can not be blank!, please select member of staff .")]
         [DisplayName("Staff ID")]
         public int staffId { get; set; }
 
-        [Required(ErrorMessage = "*can not be blank!, please select member of staff .")]
-        [DisplayName("Staff Name*")]
+        [DisplayName("Staff Name")]
         public SortedDictionary<uint, string> staffFullNames { get; set; }
-        [Required(ErrorMessage = "*can not be blank!, please select member of staff .")]
-        [DisplayName("Staff Name*")]
+
+        [DisplayName("Staff Name")]
         public  string staffFullname { get; set; }
 
         public DataTable dt { get; set; }

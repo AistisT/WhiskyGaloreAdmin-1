@@ -80,6 +80,7 @@ namespace WhiskyGaloreAdmin.Models
         [Required(ErrorMessage = "*can not be blank!")]
         [DisplayName("Staff pick?*")]
         public StaffPick staffPick { get; set; }
+        [DisplayName("Product Id")]
         public int productId { get; set; }
 
         public DataTable dt { get; set; }

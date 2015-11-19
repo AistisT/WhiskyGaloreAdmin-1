@@ -1,0 +1,8 @@
+C:\Users\aististaraskevicius\Source\Repos\WhiskyGaloreAdmin2\WhiskyGaloreAdmin\bin\sb-admin-2.Web.dll.config
+C:\Users\aististaraskevicius\Source\Repos\WhiskyGaloreAdmin2\WhiskyGaloreAdmin\bin\sb-admin-2.Web.dll
+C:\Users\aististaraskevicius\Source\Repos\WhiskyGaloreAdmin2\WhiskyGaloreAdmin\bin\sb-admin-2.Web.pdb
+C:\Users\aististaraskevicius\Source\Repos\WhiskyGaloreAdmin2\WhiskyGaloreAdmin\bin\System.Web.Mvc.dll
+C:\Users\aististaraskevicius\Source\Repos\WhiskyGaloreAdmin2\WhiskyGaloreAdmin\bin\System.Web.Mvc.xml
+C:\Users\aististaraskevicius\Source\Repos\WhiskyGaloreAdmin2\WhiskyGaloreAdmin\obj\Release\WhiskyGaloreAdmin.csprojResolveAssemblyReference.cache
+C:\Users\aististaraskevicius\Source\Repos\WhiskyGaloreAdmin2\WhiskyGaloreAdmin\obj\Release\sb-admin-2.Web.dll
+C:\Users\aististaraskevicius\Source\Repos\WhiskyGaloreAdmin2\WhiskyGaloreAdmin\obj\Release\sb-admin-2.Web.pdb

@@ -44,7 +44,7 @@ namespace WhiskyGaloreAdmin.Models
                 MySqlCommand cmd = new MySqlCommand("getStaffIdNameWithoutDailyHours", con);
                 cmd.CommandType = CommandType.StoredProcedure;
                 MySqlDataAdapter sda = new MySqlDataAdapter(cmd);
-                cmd.Parameters.AddWithValue("@icurrentDate", Convert.ToDateTime(currentDate).ToString("2015-11-19"));
+                cmd.Parameters.AddWithValue("@icurrentDate", "2015-11-19");
                 sda.Fill(dt);
                 cmd.ExecuteNonQuery();
                 con.Close();

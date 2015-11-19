@@ -10,17 +10,7 @@ C:\Users\xinyuewu\Source\Repos\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\sb-admin-
 C:\Users\xinyuewu\Source\Repos\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\sb-admin-2.Web.dll
 C:\Users\xinyuewu\Source\Repos\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\sb-admin-2.Web.pdb
 C:\Users\xinyuewu\Source\Repos\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\System.Web.Mvc.dll
-C:\Users\xinyuewu\Source\Repos\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\EntityFramework.xml
-C:\Users\xinyuewu\Source\Repos\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\EntityFramework.SqlServer.xml
-C:\Users\xinyuewu\Source\Repos\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\System.Web.Helpers.xml
 C:\Users\xinyuewu\Source\Repos\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\System.Web.Mvc.xml
-C:\Users\xinyuewu\Source\Repos\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\System.Web.Optimization.xml
-C:\Users\xinyuewu\Source\Repos\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\System.Web.Razor.xml
-C:\Users\xinyuewu\Source\Repos\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\System.Web.WebPages.xml
-C:\Users\xinyuewu\Source\Repos\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\System.Web.WebPages.Deployment.xml
-C:\Users\xinyuewu\Source\Repos\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\System.Web.WebPages.Razor.xml
-C:\Users\xinyuewu\Source\Repos\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\Antlr3.Runtime.pdb
-C:\Users\xinyuewu\Source\Repos\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\Newtonsoft.Json.xml
 C:\Users\xinyuewu\Source\Repos\WhiskyGaloreAdmin\WhiskyGaloreAdmin\obj\Debug\WhiskyGaloreAdmin.csprojResolveAssemblyReference.cache
 C:\Users\xinyuewu\Source\Repos\WhiskyGaloreAdmin\WhiskyGaloreAdmin\obj\Debug\sb-admin-2.Web.dll
 C:\Users\xinyuewu\Source\Repos\WhiskyGaloreAdmin\WhiskyGaloreAdmin\obj\Debug\sb-admin-2.Web.pdb

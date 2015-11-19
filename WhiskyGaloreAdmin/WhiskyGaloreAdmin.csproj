@@ -140,11 +140,8 @@
     <Compile Include="Domain\ManagerNavBar.cs" />
     <Compile Include="Domain\Data.cs" />
     <Compile Include="Domain\ShipperNavBar.cs" />
-    <Compile Include="Filters\AdminFilter.cs" />
-    <Compile Include="Filters\LoginFilter.cs" />
+    <Compile Include="Filters\LoggingFilter.cs" />
     <Compile Include="Filters\ManagerFilter.cs" />
-    <Compile Include="Filters\ShipperFilter.cs" />
-    <Compile Include="Filters\WarehouseFilter.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -963,7 +960,17 @@
     <Content Include="Views\Home\Manager.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Shared\_Navbar.cshtml" />
+    <Content Include="Views\Home\FlotCharts.cshtml" />
+    <Content Include="Views\Home\MorrisCharts.cshtml" />
     <Content Include="Views\Manager\Whisky.cshtml" />
+    <Content Include="Views\Home\Forms.cshtml" />
+    <Content Include="Views\Home\Panels.cshtml" />
+    <Content Include="Views\Home\Buttons.cshtml" />
+    <Content Include="Views\Home\Notifications.cshtml" />
+    <Content Include="Views\Home\Typography.cshtml" />
+    <Content Include="Views\Home\Icons.cshtml" />
+    <Content Include="Views\Home\Grid.cshtml" />
+    <Content Include="Views\Home\Blank.cshtml" />
     <Content Include="Views\Manager\Orders.cshtml" />
     <Content Include="Views\Manager\Staff.cshtml" />
     <Content Include="Views\DailyHours\Add.cshtml" />
@@ -993,8 +1000,9 @@
     <Content Include="Views\Shipping\Update.cshtml" />
     <Content Include="Views\Finances\CountrySales.cshtml" />
     <Content Include="Views\Warehouse\Orders.cshtml" />
-    <Content Include="Views\Error\RestrictedPage.cshtml" />
-    <Content Include="Views\Error\PageDoesntExist.cshtml" />
+    <Content Include="Views\Home\RestrictedPage.cshtml" />
+    <Content Include="Views\Shared\_WarehouseNav.cshtml" />
+    <Content Include="Views\Warehouse\Update.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

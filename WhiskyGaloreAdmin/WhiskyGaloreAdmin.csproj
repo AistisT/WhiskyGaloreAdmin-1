@@ -110,10 +110,6 @@
       <Private>True</Private>
       <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
     </Reference>
-    <Reference Include="Antlr3.Runtime">
-      <Private>True</Private>
-      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json">
@@ -166,6 +162,8 @@
     <Content Include="bin\Antlr3.Runtime.pdb" />
     <Content Include="bin\EntityFramework.dll" />
     <Content Include="bin\EntityFramework.SqlServer.dll" />
+    <Content Include="bin\EntityFramework.SqlServer.xml" />
+    <Content Include="bin\EntityFramework.xml" />
     <Content Include="bin\Microsoft.Web.Infrastructure.dll" />
     <Content Include="bin\MySql.Data.dll" />
     <Content Include="bin\Newtonsoft.Json.dll" />
@@ -931,6 +929,7 @@
     <Content Include="Content\less\sb-admin-2.less" />
     <Content Include="Content\less\variables.less" />
     <None Include="bin\sb-admin-2.Web.dll.config" />
+    <None Include="Properties\PublishProfiles\WhiskyGaloreAdministration.pubxml" />
     <None Include="Properties\PublishProfiles\Zeno.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\flot-data.js" />
@@ -962,17 +961,7 @@
     <Content Include="Views\Home\Manager.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Shared\_Navbar.cshtml" />
-    <Content Include="Views\Home\FlotCharts.cshtml" />
-    <Content Include="Views\Home\MorrisCharts.cshtml" />
     <Content Include="Views\Manager\Whisky.cshtml" />
-    <Content Include="Views\Home\Forms.cshtml" />
-    <Content Include="Views\Home\Panels.cshtml" />
-    <Content Include="Views\Home\Buttons.cshtml" />
-    <Content Include="Views\Home\Notifications.cshtml" />
-    <Content Include="Views\Home\Typography.cshtml" />
-    <Content Include="Views\Home\Icons.cshtml" />
-    <Content Include="Views\Home\Grid.cshtml" />
-    <Content Include="Views\Home\Blank.cshtml" />
     <Content Include="Views\Manager\Orders.cshtml" />
     <Content Include="Views\Manager\Staff.cshtml" />
     <Content Include="Views\DailyHours\Add.cshtml" />
@@ -1002,7 +991,6 @@
     <Content Include="Views\Shipping\Update.cshtml" />
     <Content Include="Views\Finances\CountrySales.cshtml" />
     <Content Include="Views\Warehouse\Orders.cshtml" />
-    <Content Include="Views\Home\RestrictedPage.cshtml" />
     <Content Include="Views\Shared\_WarehouseNav.cshtml" />
     <Content Include="Views\Warehouse\Update.cshtml" />
     <Content Include="Views\Error\PageDoesntExist.cshtml" />
@@ -1017,7 +1005,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
-    <None Include="Project_Readme.html" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

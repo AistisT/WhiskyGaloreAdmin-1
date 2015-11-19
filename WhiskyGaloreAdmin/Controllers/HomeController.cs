@@ -64,8 +64,10 @@ namespace WhiskyGaloreAdmin.Controllers
                     {
                         return RedirectToAction("Orders", "Shipping");
                     }
-
-
+                    if (account.Equals("Warehouse"))
+                    {
+                        return RedirectToAction("Orders", "Warehouse");
+                    }
                     return View();
                 }
 

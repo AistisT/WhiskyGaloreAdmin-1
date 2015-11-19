@@ -18,13 +18,10 @@ namespace WhiskyGaloreAdmin.Controllers
             return View(s);
         }
 
-
-
         [LoggingFilter]
         [HttpGet]
         public ActionResult Update(int orderId)
         {
-            System.Diagnostics.Debug.WriteLine("Update(int orderId)");
             Shipping s = new Shipping();
             s.orderDetails(orderId);
             return View(s);
@@ -35,10 +32,10 @@ namespace WhiskyGaloreAdmin.Controllers
         public ActionResult Update(Shipping s)
         {
             s.updateOrderStatus();
-                ModelState.Clear();
-                Shipping a = new Shipping();
-                a.ordersTable();
-                return View("Orders",a);
+            ModelState.Clear();
+            Shipping a = new Shipping();
+            a.ordersTable();
+            return View("Orders", a);
         }
     }
 }

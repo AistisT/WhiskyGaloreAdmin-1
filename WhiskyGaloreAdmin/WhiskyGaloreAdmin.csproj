@@ -1000,6 +1000,8 @@
     <Content Include="Views\Finances\CountrySales.cshtml" />
     <Content Include="Views\Warehouse\Orders.cshtml" />
     <Content Include="Views\Home\RestrictedPage.cshtml" />
+    <Content Include="Views\Shared\_WarehouseNav.cshtml" />
+    <Content Include="Views\Warehouse\Update.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

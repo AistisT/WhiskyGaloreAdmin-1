@@ -7,8 +7,9 @@ using System.Web.Routing;
 
 namespace WhiskyGaloreAdmin.Filters
 {
-    public class LoggingFilter : ActionFilterAttribute
+    public class ShipperFilter : ActionFilterAttribute
     {
+
         public override void OnActionExecuting(ActionExecutingContext filterContext)
         {
             if (System.Web.HttpContext.Current.Session["account"] == null)
@@ -20,15 +21,17 @@ namespace WhiskyGaloreAdmin.Filters
                     { "action", "Login" } 
                 });
             }
+            else if (System.Web.HttpContext.Current.Session["account"].ToString() != "Shipper")
+            {
+                filterContext.Result = new RedirectToRouteResult(
+                    new RouteValueDictionary 
+                { 
+                    { "controller", "Error" }, 
+                    { "action", "RestrictedPage" } 
+                });
+            }
         }
-        
-
-       /* public override void OnActionExecuted(ActionExecutedContext filterContext)
-        {
-            if (filterContext.Exception != null)
-                filterContext.HttpContext.Trace.Write("(Logging Filter)Exception thrown");
-
-            base.OnActionExecuted(filterContext);
-        }*/
     }
+
+
 }

@@ -13,13 +13,13 @@ namespace WhiskyGaloreAdmin.Controllers
 {
     public class CategoryController : Controller
     {
-        [LoggingFilter]
+        [AdminFilter]
         // GET: /Category/Details
         public ActionResult Details()
         {
             return View(new Category());
         }
-        [LoggingFilter]
+        [AdminFilter]
         // GET: /Category/Edit
         public ActionResult Edit(int categoryId)
         {
@@ -37,7 +37,7 @@ namespace WhiskyGaloreAdmin.Controllers
             Category c = new Category(categoryId);
             return View(c);
         }
-        [LoggingFilter]
+        [AdminFilter]
         // POST: /Category/Edit
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -45,6 +45,15 @@ namespace WhiskyGaloreAdmin.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit(Category c)
         {
+
+            if (c==null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            if (c == null)
+            {
+                return HttpNotFound();
+            }
            
             if (ModelState.IsValid)
             {
@@ -58,14 +67,14 @@ namespace WhiskyGaloreAdmin.Controllers
             }
             return RedirectToAction("Details");
         }
-        [LoggingFilter]
+        [AdminFilter]
         // GET: /Category/Add/
         public ActionResult Add()
         {
 
             return View(new Category());
         }
-        [LoggingFilter]
+        [AdminFilter]
         // POST: /Category/Add
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -73,6 +82,16 @@ namespace WhiskyGaloreAdmin.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Add(Category c)
         {
+
+            if (c == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            if (c == null)
+            {
+                return HttpNotFound();
+            }
+
             if (ModelState.IsValid)
             {
                 Debug.WriteLine("id = ");

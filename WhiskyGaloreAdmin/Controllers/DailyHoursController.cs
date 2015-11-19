@@ -7,18 +7,8 @@ namespace WhiskyGaloreAdmin.Controllers
 {
     public class DailyHoursController : Controller
     {
-        [LoggingFilter]
-        [ManagerFilter]
-        [HandleError()]
-        public ActionResult SomeError()
-        {
 
-            Manager m = new Manager();
-            m.getData("getStaffDataWithDailyHours");
-            return View("Details",m);
-        }
 
-        [LoggingFilter]
         [ManagerFilter]
         public ActionResult Details()
         {
@@ -26,7 +16,7 @@ namespace WhiskyGaloreAdmin.Controllers
             m.getData("getStaffDataWithDailyHours");
             return View(m);
         }
-        [LoggingFilter]
+
         [ManagerFilter]
         public ActionResult Add()
         {
@@ -35,24 +25,26 @@ namespace WhiskyGaloreAdmin.Controllers
             return View(d);
         }
 
-        [LoggingFilter]
         [ManagerFilter]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Add(DailyHours h)
         {
-            // if (ModelState.IsValid)
-            // {
+            if (h == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            if (h == null)
+            {
+                return HttpNotFound();
+            }
             h.InsertDailyhours(h);
             ModelState.Clear();
             DailyHours d = new DailyHours();
             d.getNames();
             return View(d);
-            // }
-            //   else
-            //    return View(h);
+
         }
-        [LoggingFilter]
         [ManagerFilter]
         [HttpGet]
         public ActionResult Edit(int staffId)
@@ -71,23 +63,24 @@ namespace WhiskyGaloreAdmin.Controllers
                 return View(d);
         }
 
-        [LoggingFilter]
         [ManagerFilter]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(DailyHours d, string command)
         {
-
+            if (d == null || string.IsNullOrEmpty(command))
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            if (d == null || string.IsNullOrEmpty(command))
+            {
+                return HttpNotFound();
+            }
             if (command.Equals("Update"))
             {
-                // if (ModelState.IsValid)
-                //{
+
                 d.UpdateDailyHours(d);
-                // }
-                //  else
-                //{
-                //   return View(d);
-                //  }
+
             }
             else
             {

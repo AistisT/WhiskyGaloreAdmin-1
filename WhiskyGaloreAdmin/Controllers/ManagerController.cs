@@ -6,7 +6,6 @@ namespace WhiskyGaloreAdmin.Controllers
 {
     public class ManagerController : Controller
     {
-        [LoggingFilter]
         [ManagerFilter]
         public ActionResult Orders()
         {
@@ -14,7 +13,6 @@ namespace WhiskyGaloreAdmin.Controllers
             m.getData("getOrders");
             return View(m);
         }
-        [LoggingFilter]
         [ManagerFilter]
         public ActionResult Whisky()
         {
@@ -22,7 +20,7 @@ namespace WhiskyGaloreAdmin.Controllers
             m.getData("getProductInfo");
             return View(m);
         }
-        [LoggingFilter]
+
         [ManagerFilter]
         public ActionResult Staff()
         {

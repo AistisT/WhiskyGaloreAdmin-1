@@ -13,26 +13,22 @@ namespace WhiskyGaloreAdmin.Controllers
 {
     public class ShipperController : Controller
     {
-        [LoggingFilter]
+
+        [AdminFilter]
         // GET: /Shipper/Details
         public ActionResult Details()
         {
-            if (System.Web.HttpContext.Current.Session["lg"] != null)
-            {
                 return View(new Shipper());
-            }
-            else
-            {
-                return RedirectToAction("Login", "Home");
-            }
         }
-        [LoggingFilter]
+
+        [AdminFilter]
         // GET: /Shipper/Register
         public ActionResult Register()
         {
             return View();
         }
-        [LoggingFilter]
+
+        [AdminFilter]
         // POST: /Shipper/Register
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -40,6 +36,15 @@ namespace WhiskyGaloreAdmin.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Register(Shipper s)
         {
+            if (s == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            if (s == null)
+            {
+                return HttpNotFound();
+            }
+
             if (ModelState.IsValid)
             {
                 s.insertShipper(s);
@@ -51,10 +56,20 @@ namespace WhiskyGaloreAdmin.Controllers
             }
             return RedirectToAction("Details");
         }
-        [LoggingFilter]
+
+        [AdminFilter]
         // GET: /Shipper/Edit
         public ActionResult Edit(string username)
         {
+
+            if ( string.IsNullOrEmpty(username))
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            if ( string.IsNullOrEmpty(username))
+            {
+                return HttpNotFound();
+            }
             Debug.WriteLine("in controller " + username);
             if (username == null)
             {
@@ -70,7 +85,8 @@ namespace WhiskyGaloreAdmin.Controllers
              
             return View(s);
         }
-        [LoggingFilter]
+
+        [AdminFilter]
         // POST: /Shipper/Edit
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -78,6 +94,15 @@ namespace WhiskyGaloreAdmin.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit(Shipper r, string command)
         {
+            if (r == null || string.IsNullOrEmpty(command))
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            if (r == null || string.IsNullOrEmpty(command))
+            {
+                return HttpNotFound();
+            }
+
             if (command.Equals("Update"))
             {
                 if (ModelState.IsValid)

@@ -28,10 +28,8 @@
                                 <th>ID</th>
                                 <th>Order Date</th>
                                 <th>Tax</th>
-                                <th>Discount</th>
                                 <th>Shipping Cost</th>
                                 <th>Total Price</th>
-                                <th>Paid</th>
                                 <th>Delivery Status</th>
                                 <th>Required Date</th>
                                 <th>Dispatch Date</th>
@@ -45,10 +43,8 @@
                                     <td>@(Model.dt.Rows[i]["orderId"].ToString())</td>
                                     <td>@(Model.dt.Rows[i]["orderDate"].ToString().AsDateTime().ToShortDateString())</td>
                                     <td>@(Model.dt.Rows[i]["tax"].ToString())</td>
-                                    <td>@(Model.dt.Rows[i]["discount"].ToString())</td>
                                     <td>@(Model.dt.Rows[i]["shippingCost"].ToString()) £</td>
                                     <td>@(Model.dt.Rows[i]["totalPrice"].ToString()) £</td>
-                                    <td>@(Model.dt.Rows[i]["paid"].ToString())</td>
                                     <td>@(Model.dt.Rows[i]["orderStatus"].ToString())</td>
                                     <td>@(Model.dt.Rows[i]["requiredDate"].ToString().AsDateTime().ToShortDateString())</td>
                                     <td>@(Model.dt.Rows[i]["dispatchedDate"].ToString().AsDateTime().ToShortDateString())</td>

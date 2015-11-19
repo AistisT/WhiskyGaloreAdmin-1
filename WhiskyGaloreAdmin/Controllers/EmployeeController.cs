@@ -13,19 +13,22 @@ namespace WhiskyGaloreAdmin.Controllers
 {
     public class EmployeeController : Controller
     {
-        [LoggingFilter]
+
+        [AdminFilter]
         // GET: /Employee/Details
         public ActionResult Details()
         {
             return View(new Staff());
         }
-        [LoggingFilter]
+
+        [AdminFilter]
         // GET: /Employee/Register
         public ActionResult Register()
         {
             return View(new Staff());
         }
-        [LoggingFilter]
+
+        [AdminFilter]
         // POST: /Employee/Register
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -33,6 +36,15 @@ namespace WhiskyGaloreAdmin.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Register(Staff r)
         {
+            if (r == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            if (r == null)
+            {
+                return HttpNotFound();
+            }
+
             if (ModelState.IsValid)
             {
                 r.insertEmployee(r);
@@ -44,7 +56,8 @@ namespace WhiskyGaloreAdmin.Controllers
             }
             return RedirectToAction("Details");
         }
-        [LoggingFilter]
+
+        [AdminFilter]
         // GET: /Employee/Edit
         public ActionResult Edit(string username)
         {
@@ -62,7 +75,8 @@ namespace WhiskyGaloreAdmin.Controllers
             Staff s = new Staff(username);
             return View(s);
         }
-        [LoggingFilter]
+
+        [AdminFilter]
         // POST: /Employee/Register
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -70,6 +84,15 @@ namespace WhiskyGaloreAdmin.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit(Staff r, string command)
         {
+            if (r == null || string.IsNullOrEmpty(command))
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            if (r == null || string.IsNullOrEmpty(command))
+            {
+                return HttpNotFound();
+            }
+
             Debug.WriteLine("in edit");
             if (command.Equals("Update"))
             {

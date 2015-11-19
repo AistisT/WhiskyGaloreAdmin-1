@@ -7,7 +7,7 @@ namespace WhiskyGaloreAdmin.Controllers
 {
     public class FinancesController : Controller
     {
-        [LoggingFilter]
+
         [ManagerFilter]
         [HttpGet]
         public ActionResult DailyFinances()
@@ -16,18 +16,27 @@ namespace WhiskyGaloreAdmin.Controllers
             m.getData("getDailyFinances");
             return View(m);
         }
-        [LoggingFilter]
+
         [ManagerFilter]
         [HttpGet]
         public ActionResult Calculate(System.DateTime dailyDate)
         {
+            if (dailyDate==null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            if (dailyDate == null)
+            {
+                return HttpNotFound();
+            }
+
             ModelState.Clear();
             Manager m = new Manager();
             m.calculateDailyFinances(dailyDate);
             m.getData("getDailyFinances");
             return View("DailyFinances",m);
         }
-        [LoggingFilter]
+
         [ManagerFilter]
         [HttpGet]
         public ActionResult MonthlyFinances()
@@ -36,18 +45,29 @@ namespace WhiskyGaloreAdmin.Controllers
             m.getData("getMonthlyFinances");
             return View(m);
         }
-        [LoggingFilter]
+
         [ManagerFilter]
         [HttpGet]
         public ActionResult CalculateMonthly(int month,string year)
         {
+
+            if (month < 0 || string.IsNullOrEmpty(year))
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            if (month < 0 || string.IsNullOrEmpty(year))
+            {
+                return HttpNotFound();
+            }
+
+
             ModelState.Clear();
             Manager m = new Manager();
             m.calculateMonthlyFinances (month,year);
             m.getData("getMonthlyFinances");
             return View("MonthlyFinances", m);
         }
-        [LoggingFilter]
+
         [ManagerFilter]
         [HttpGet]
         public ActionResult YearlyFinances()
@@ -56,17 +76,26 @@ namespace WhiskyGaloreAdmin.Controllers
             m.getData("getYearlyFinances");
             return View(m);
         }
-        [LoggingFilter]
+
         [ManagerFilter]
         public ActionResult CalculateYearly(string year)
         {
+            if (string.IsNullOrEmpty(year))
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            if (string.IsNullOrEmpty(year))
+            {
+                return HttpNotFound();
+            }
+
             ModelState.Clear();
             Manager m = new Manager();
             m.calculateYearlyFinances(year);
             m.getData("getYearlyFinances");
             return View("YearlyFinances", m);
         }
-        [LoggingFilter]
+
         [ManagerFilter]
         [HttpGet]
         public ActionResult CountrySales()
@@ -75,10 +104,19 @@ namespace WhiskyGaloreAdmin.Controllers
             m.getData("getCountrySales");
             return View(m);
         }
-        [LoggingFilter]
+
         [ManagerFilter]
         public ActionResult CalculateCountry(string country)
         {
+            if (string.IsNullOrEmpty(country))
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            if (string.IsNullOrEmpty(country))
+            {
+                return HttpNotFound();
+            }
+
             ModelState.Clear();
             Manager m = new Manager();
             m.calculateCountrySales(country);

@@ -11,13 +11,7 @@ namespace WhiskyGaloreAdmin.Controllers
     public class HomeController : Controller
     {
 
-        public ActionResult RestrictedPage()
-        {
-            return View();
-        }
-
-
-        [LoggingFilter]
+        [AdminFilter]
         // GET: /Home/Admin
         public ActionResult Admin()
         {
@@ -58,7 +52,7 @@ namespace WhiskyGaloreAdmin.Controllers
                     }
                     if (account.Equals("Manager"))
                     {
-                        return RedirectToAction("Product", "Manager");
+                        return RedirectToAction("Whisky", "Manager");
                     }
                     if (account.Equals("Shipper"))
                     {
@@ -81,7 +75,7 @@ namespace WhiskyGaloreAdmin.Controllers
                 return View(user);
             }
         }
-        [LoggingFilter]
+
         // GET: /LogOut
         public ActionResult Logout()
         {

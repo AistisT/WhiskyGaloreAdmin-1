@@ -78,7 +78,7 @@ namespace WhiskyGaloreAdmin.Models
                         catId = reader.GetInt32("categoryId");
                         categoryName = reader.GetString("categoryName");
                         categoryDescrip = reader.GetString("catDescription");
-                        picURL = reader.GetString("picUrl");
+                        if (!reader.IsDBNull(reader.GetOrdinal("picUrl"))) { picURL = reader.GetString("picUrl"); } else { picURL = null; }
                         int i = reader.GetInt32("categoryInUse");
                         catInUse = (CategoryIn)i;
 

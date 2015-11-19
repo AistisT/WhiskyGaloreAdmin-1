@@ -3,17 +3,7 @@ C:\Users\aististaraskevicius\Source\Repos\WhiskyGaloreAdmin2\WhiskyGaloreAdmin\b
 C:\Users\aististaraskevicius\Source\Repos\WhiskyGaloreAdmin2\WhiskyGaloreAdmin\bin\sb-admin-2.Web.dll
 C:\Users\aististaraskevicius\Source\Repos\WhiskyGaloreAdmin2\WhiskyGaloreAdmin\bin\sb-admin-2.Web.pdb
 C:\Users\aististaraskevicius\Source\Repos\WhiskyGaloreAdmin2\WhiskyGaloreAdmin\bin\System.Web.Mvc.dll
-C:\Users\aististaraskevicius\Source\Repos\WhiskyGaloreAdmin2\WhiskyGaloreAdmin\bin\EntityFramework.xml
-C:\Users\aististaraskevicius\Source\Repos\WhiskyGaloreAdmin2\WhiskyGaloreAdmin\bin\EntityFramework.SqlServer.xml
-C:\Users\aististaraskevicius\Source\Repos\WhiskyGaloreAdmin2\WhiskyGaloreAdmin\bin\System.Web.Helpers.xml
 C:\Users\aististaraskevicius\Source\Repos\WhiskyGaloreAdmin2\WhiskyGaloreAdmin\bin\System.Web.Mvc.xml
-C:\Users\aististaraskevicius\Source\Repos\WhiskyGaloreAdmin2\WhiskyGaloreAdmin\bin\System.Web.Optimization.xml
-C:\Users\aististaraskevicius\Source\Repos\WhiskyGaloreAdmin2\WhiskyGaloreAdmin\bin\System.Web.Razor.xml
-C:\Users\aististaraskevicius\Source\Repos\WhiskyGaloreAdmin2\WhiskyGaloreAdmin\bin\System.Web.WebPages.xml
-C:\Users\aististaraskevicius\Source\Repos\WhiskyGaloreAdmin2\WhiskyGaloreAdmin\bin\System.Web.WebPages.Deployment.xml
-C:\Users\aististaraskevicius\Source\Repos\WhiskyGaloreAdmin2\WhiskyGaloreAdmin\bin\System.Web.WebPages.Razor.xml
-C:\Users\aististaraskevicius\Source\Repos\WhiskyGaloreAdmin2\WhiskyGaloreAdmin\bin\Antlr3.Runtime.pdb
-C:\Users\aististaraskevicius\Source\Repos\WhiskyGaloreAdmin2\WhiskyGaloreAdmin\bin\Newtonsoft.Json.xml
 C:\Users\aististaraskevicius\Source\Repos\WhiskyGaloreAdmin2\WhiskyGaloreAdmin\obj\Debug\sb-admin-2.Web.dll
 C:\Users\aististaraskevicius\Source\Repos\WhiskyGaloreAdmin2\WhiskyGaloreAdmin\obj\Debug\sb-admin-2.Web.pdb
 C:\Users\xinyuewu\Source\Repos\WhiskyGaloreAdmin\WhiskyGaloreAdmin\bin\sb-admin-2.Web.dll.config

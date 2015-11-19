@@ -13,13 +13,15 @@ namespace WhiskyGaloreAdmin.Controllers
 {
     public class ProductController : Controller
     {
-        [LoggingFilter]
+
+        [AdminFilter]
         // GET: /Product/Details
         public ActionResult Details()
         {
             return View(new Product());
         }
-        [LoggingFilter]
+
+        [AdminFilter]
         // GET: /Product/Edit
         public ActionResult Edit(int productId)
         {
@@ -36,7 +38,8 @@ namespace WhiskyGaloreAdmin.Controllers
             Product p = new Product(productId);
             return View(p);
         }
-        [LoggingFilter]
+
+        [AdminFilter]
         // POST: /Product/Edit
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -44,8 +47,14 @@ namespace WhiskyGaloreAdmin.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit(Product p, string command)
         {
-            Debug.WriteLine("ins " + p.SelectedCat);
-            Debug.WriteLine("id " + p.productId);
+            if (p == null || string.IsNullOrEmpty(command))
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            if (p == null || string.IsNullOrEmpty(command))
+            {
+                return HttpNotFound();
+            }
 
             if (command.Equals("Update"))
             {
@@ -67,14 +76,16 @@ namespace WhiskyGaloreAdmin.Controllers
             return RedirectToAction("Details");
 
         }
-        [LoggingFilter]
+
+        [AdminFilter]
         // GET: /Product/Add
         public ActionResult Add()
         {
             
             return View(new Product());
         }
-        [LoggingFilter]
+
+        [AdminFilter]
         // POST: /Product/Add
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -82,6 +93,15 @@ namespace WhiskyGaloreAdmin.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Add(Product p)
         {
+            if (p == null )
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            if (p == null )
+            {
+                return HttpNotFound();
+            }
+
             Debug.WriteLine("ins " + p.SelectedCat);
             if (ModelState.IsValid)
             {

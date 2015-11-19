@@ -140,8 +140,11 @@
     <Compile Include="Domain\ManagerNavBar.cs" />
     <Compile Include="Domain\Data.cs" />
     <Compile Include="Domain\ShipperNavBar.cs" />
-    <Compile Include="Filters\LoggingFilter.cs" />
+    <Compile Include="Filters\AdminFilter.cs" />
+    <Compile Include="Filters\LoginFilter.cs" />
     <Compile Include="Filters\ManagerFilter.cs" />
+    <Compile Include="Filters\ShipperFilter.cs" />
+    <Compile Include="Filters\WarehouseFilter.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -1003,6 +1006,8 @@
     <Content Include="Views\Home\RestrictedPage.cshtml" />
     <Content Include="Views\Shared\_WarehouseNav.cshtml" />
     <Content Include="Views\Warehouse\Update.cshtml" />
+    <Content Include="Views\Error\PageDoesntExist.cshtml" />
+    <Content Include="Views\Error\RestrictedPage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

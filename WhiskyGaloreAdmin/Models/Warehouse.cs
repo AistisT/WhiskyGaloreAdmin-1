@@ -63,7 +63,6 @@ namespace WhiskyGaloreAdmin.Models
 
         public void ordersTable()
         {
-            String staffUsername = System.Web.HttpContext.Current.Session["loginName"].ToString();
             this.dt = new DataTable();
             try
             {
@@ -71,7 +70,6 @@ namespace WhiskyGaloreAdmin.Models
                 con.Open();
                 MySqlCommand cmd = new MySqlCommand("getOrdersForStaff", con);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@sUsername", staffUsername);
                 MySqlDataAdapter sda = new MySqlDataAdapter(cmd);
 
                 sda.Fill(dt);

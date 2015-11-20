@@ -40,7 +40,7 @@ namespace WhiskyGaloreAdmin.Controllers
 
                 else if (System.Web.HttpContext.Current.Session["account"].ToString() == "Warehouse")
                 {
-                    var WarehouseData = new ShipperNavBar();
+                    var WarehouseData = new WarehouseNavBar();
                     return PartialView("_WarehouseNav", WarehouseData.navbarItems().ToList());
                 }
 

@@ -136,6 +136,7 @@
     <Compile Include="Domain\ManagerNavBar.cs" />
     <Compile Include="Domain\Data.cs" />
     <Compile Include="Domain\ShipperNavBar.cs" />
+    <Compile Include="Domain\WarehouseNavBar.cs" />
     <Compile Include="Filters\AdminFilter.cs" />
     <Compile Include="Filters\LoginFilter.cs" />
     <Compile Include="Filters\ManagerFilter.cs" />

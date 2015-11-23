@@ -34,6 +34,7 @@
                                 <th>Units in Stock</th>
                                 <th>Unit weight</th>
                                 <th>Quentity per Unit</th>
+                                <th>Wholesale</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -48,6 +49,7 @@
                                 <td>@(Model.dt.Rows[i]["unitsInStock"].ToString())</td>
                                 <td>@(Model.dt.Rows[i]["unitWeight"].ToString()) kg</td>
                                 <td>@(Model.dt.Rows[i]["quantityPerUnit"].ToString())</td>
+                                <td>@(Model.dt.Rows[i]["wholesale"].ToString())</td>
                             </tr>
                             }
                         </tbody>

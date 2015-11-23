@@ -31,7 +31,6 @@
                                 <th>Shipping Cost</th>
                                 <th>Total Price</th>
                                 <th>Delivery Status</th>
-                                <th>Required Date</th>
                                 <th>Dispatch Date</th>
                                 <th>Delivery Date</th>
                             </tr>
@@ -46,9 +45,17 @@
                                     <td>@(Model.dt.Rows[i]["shippingCost"].ToString()) £</td>
                                     <td>@(Model.dt.Rows[i]["totalPrice"].ToString()) £</td>
                                     <td>@(Model.dt.Rows[i]["orderStatus"].ToString())</td>
-                                    <td>@(Model.dt.Rows[i]["requiredDate"].ToString().AsDateTime().ToShortDateString())</td>
+                                    @if(!string.IsNullOrEmpty(Model.dt.Rows[i]["dispatchedDate"].ToString())){
                                     <td>@(Model.dt.Rows[i]["dispatchedDate"].ToString().AsDateTime().ToShortDateString())</td>
+                                    }
+                                    else { <td></td>}
+                                    @if (!string.IsNullOrEmpty(Model.dt.Rows[i]["deliveredDate"].ToString()))
+                                    {
                                     <td>@(Model.dt.Rows[i]["deliveredDate"].ToString().AsDateTime().ToShortDateString())</td>
+                                    }
+                                    else
+                                    {
+                                    <td></td>}
                                 </tr>
                             }
                         </tbody>

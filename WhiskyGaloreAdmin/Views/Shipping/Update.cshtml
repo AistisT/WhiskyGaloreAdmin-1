@@ -33,19 +33,15 @@
                                 @Html.LabelFor(model => model.orderDate, new { @class = "control-label col-lg-4" })
                                 @Html.DisplayFor(model => model.orderDate, "{0:yyyy-MM-dd}", new { type = "date" })
                             </div>
+                        </div>
+                        <div class="col-lg-6">
                             <div class="form-group">
                                 @Html.LabelFor(model => model.processedDate, new { @class = "control-label col-lg-4" })
                                 @Html.DisplayFor(model => model.processedDate, "{0:yyyy-MM-dd}", new { type = "date" })
                             </div>
-                        </div>
-                        <div class="col-lg-6">
                             <div class="form-group">
                                 @Html.LabelFor(model => model.sCost, new { @class = "control-label col-lg-4" })
                                 @Html.DisplayFor(model => model.sCost, new { @class = "control-label col-lg-8" })  £
-                            </div>
-                            <div class="form-group">
-                                @Html.LabelFor(model => model.requiredDate, new { @class = "control-label col-lg-4" })
-                                @Html.DisplayFor(model => model.requiredDate, "{0:yyyy-MM-dd}", new { type = "date" })
                             </div>
                             @if (!string.IsNullOrEmpty(Model.dispatchedDate))
                             {

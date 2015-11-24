@@ -58,7 +58,12 @@
                                     <td>@(Model.dt.Rows[i]["postcode"].ToString())</td>
                                     <td>@(Model.dt.Rows[i]["shippingCost"].ToString()) £</td>
                                     <td>@(Model.dt.Rows[i]["processedDate"].ToString().AsDateTime().ToShortDateString())</td>
-                                    <td>@(Model.dt.Rows[i]["dispatchedDate"].ToString().AsDateTime().ToShortDateString())</td>
+                                    @if(!string.IsNullOrEmpty(Model.dt.Rows[i]["dispatchedDate"].ToString())){
+                                            <td> @(Model.dt.Rows[i]["dispatchedDate"].ToString().AsDateTime().ToShortDateString())</td>
+                                    }
+                                    else
+                                    {
+                                    <td></td>}
                                     <td>@(Model.dt.Rows[i]["orderStatus"].ToString())</td>
                                     <td>@Html.ActionLink("View/Update", "Update", null, new { orderId = Model.dt.Rows[i]["orderId"] }, null)</td>
                                 </tr>

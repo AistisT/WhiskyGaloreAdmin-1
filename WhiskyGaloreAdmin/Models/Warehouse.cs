@@ -32,13 +32,13 @@ namespace WhiskyGaloreAdmin.Models
 
         [DisplayName("Order Date")]
         public String orderDate { get; set; }
-        [DisplayName("Required Date")]
-        public String requiredDate { get; set; }
 
         [DisplayName("Shipper")]
         public String shipper { get; set; }
         [DisplayName("Shipping Cost")]
         public decimal sCost { get; set; }
+        [DisplayName("Tax")]
+        public decimal tax { get; set; }
         [DisplayName("Total Price")]
         public decimal price { get; set; }
 
@@ -102,8 +102,8 @@ namespace WhiskyGaloreAdmin.Models
                     price = reader.GetDecimal("totalPrice");
                     shipper = reader.GetString("companyName");
                     sCost = reader.GetDecimal("shippingCost");
+                    tax = reader.GetDecimal("tax");
                     orderDate = reader.GetDateTime("orderDate").ToString("yyyy-MM-dd");
-                    if (!reader.IsDBNull(reader.GetOrdinal("requiredDate"))) { requiredDate = reader.GetDateTime("requiredDate").ToString("yyyy-MM-dd"); } else { requiredDate = null; }
 
                     if (!reader.IsDBNull(reader.GetOrdinal("branch_branchId"))) { branchID = reader.GetInt32("branch_branchId"); }
 

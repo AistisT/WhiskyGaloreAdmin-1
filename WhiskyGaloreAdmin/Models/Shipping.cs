@@ -33,8 +33,6 @@ namespace WhiskyGaloreAdmin.Models
 
         [DisplayName("Order Date")]
         public String orderDate { get; set; }
-        [DisplayName("Required Date")]
-        public String requiredDate { get; set; }
         [DisplayName("Processed Date")]
         public String processedDate { get; set; }
         [DisplayName("Dispatched Date")]
@@ -107,7 +105,6 @@ namespace WhiskyGaloreAdmin.Models
                     System.Diagnostics.Debug.WriteLine("second "+cStatus);
                     sCost = reader.GetFloat("shippingCost");
                     orderDate = reader.GetDateTime("orderDate").ToString("yyyy-MM-dd");
-                    if (!reader.IsDBNull(reader.GetOrdinal("requiredDate"))) { requiredDate = reader.GetDateTime("requiredDate").ToString("yyyy-MM-dd"); } else { requiredDate = null; }
                     if (!reader.IsDBNull(reader.GetOrdinal("processedDate"))) { processedDate = reader.GetDateTime("processedDate").ToString("yyyy-MM-dd"); } else { processedDate = null; }
                     if (!reader.IsDBNull(reader.GetOrdinal("dispatchedDate"))) { dispatchedDate = reader.GetDateTime("dispatchedDate").ToString("yyyy-MM-dd"); } else { dispatchedDate = null; }
                     if (!reader.IsDBNull(reader.GetOrdinal("deliveredDate"))) { deliveredDate = reader.GetDateTime("deliveredDate").ToString("yyyy-MM-dd"); } else { deliveredDate = null; }
